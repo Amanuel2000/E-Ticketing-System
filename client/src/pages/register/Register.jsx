@@ -20,20 +20,20 @@ const Register = () => {
           <h1>Register</h1>
           <form>
             <div className="inputBox">
-              <Person />
+              <Person style={{ color: "#21465b" }}/>
               <input type="text" placeholder="Name" />
             </div>
             <div className="inputBox">
-              <Mail />
+              <Mail style={{ color: "#21465b" }}/>
               <input type="email" placeholder="Email" />
             </div>
             <div className="inputBox">
-              <Lock />
+              <Lock style={{ color: "#21465b" }}/>
               <input type="password" placeholder="Password" />
             </div>
             <div className="inputBox">
-              <Lock />
-              <input type="password" placeholder=" Confirm Password" />
+              <Lock style={{ color: "#21465b" }}/>
+              <input type="password" placeholder="Confirm Password" />
             </div>
             <button>Register</button>
           </form>

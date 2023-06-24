@@ -20,11 +20,11 @@ const Login = () => {
           <h1>Login</h1>
           <form>
             <div className="inputBox">
-              <Mail />
+              <Mail style={{ color: "#21465b" }}/>
               <input type="email" placeholder="Email" />
             </div>
             <div className="inputBox">
-              <Lock />
+              <Lock style={{ color: "#21465b" }}/>
               <input type="password" placeholder="Password" />
             </div>
             <button>Login</button>

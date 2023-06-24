@@ -4,6 +4,7 @@ import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Profile from "./pages/profile/Profile";
 import Register from "./pages/register/Register";
+import Fixtures from "./pages/fixtures/Fixtures";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -23,6 +24,10 @@ function App() {
       element: <Register />
     },
     {
+      path: "/fixtures",
+      element: <Fixtures />
+    },
+    {
       path: "/about",
       element: <About />
     },
@@ -33,7 +38,7 @@ function App() {
     {
       path: "/profile",
       element: <Profile />
-    },
+    }
   ]);
   return (
     <div>

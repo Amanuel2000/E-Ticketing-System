@@ -73,13 +73,19 @@
         flex-direction: column;
         gap: 30px;
 
-        input {
-          border: none;
-          border-bottom: 1px solid lightgray;
-          padding: 20px 10px;
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
-          &:focus {
-            outline: none;
+          input {
+            border: none;
+            border-bottom: 1px solid lightgray;
+            padding: 20px 10px;
+
+            &:focus {
+              outline: none;
+            }
           }
         }
 

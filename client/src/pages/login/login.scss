@@ -73,13 +73,19 @@
         gap: 30px;
         color: #010101;
 
-        input {
-          border: none;
-          border-bottom: 1px solid lightgray;
-          padding: 20px 10px;
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      
+          input {
+            border: none;
+            border-bottom: 1px solid lightgray;
+            padding: 20px 10px;
 
-          &:focus {
-            outline: none;
+            &:focus {
+              outline: none;
+            }
           }
         }
 

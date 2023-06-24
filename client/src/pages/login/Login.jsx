@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./login.scss";
+import { Lock, Mail } from "@mui/icons-material";
 
 const Login = () => {
   return (
@@ -18,8 +19,14 @@ const Login = () => {
         <div className="right">
           <h1>Login</h1>
           <form>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <div className="inputBox">
+              <Mail />
+              <input type="email" placeholder="Email" />
+            </div>
+            <div className="inputBox">
+              <Lock />
+              <input type="password" placeholder="Password" />
+            </div>
             <button>Login</button>
           </form>
         </div>

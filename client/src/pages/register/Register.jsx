@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./register.scss";
+import { Lock, Mail, Person } from "@mui/icons-material";
 
 const Register = () => {
   return (
@@ -18,10 +19,22 @@ const Register = () => {
         <div className="right">
           <h1>Register</h1>
           <form>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <input type="password" placeholder="Confirm Password" />
+            <div className="inputBox">
+              <Person />
+              <input type="text" placeholder="Name" />
+            </div>
+            <div className="inputBox">
+              <Mail />
+              <input type="email" placeholder="Email" />
+            </div>
+            <div className="inputBox">
+              <Lock />
+              <input type="password" placeholder="Password" />
+            </div>
+            <div className="inputBox">
+              <Lock />
+              <input type="password" placeholder=" Confirm Password" />
+            </div>
             <button>Register</button>
           </form>
         </div>

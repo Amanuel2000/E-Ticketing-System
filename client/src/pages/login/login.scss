@@ -1,0 +1,105 @@
+.login {
+  height: 100vh;
+  background-color: rgb(193, 190, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    width: 50%;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    min-height: 600px;
+    overflow: hidden;
+
+    .left {
+      flex: 1;
+      background: -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
+      background-size: cover;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: white;
+
+      h1 {
+        font-size: 60px;
+        text-align: center;
+        line-height: 100px;
+      }
+
+      span {
+        font-size: 14px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px;
+        border: none;
+        background-color: #5adbb5;
+        color: #010101;
+        font-weight: bold;
+        font-size: 16px;
+        position: relative;
+        bottom: 0;
+        cursor: pointer;
+        transition: 0.5s ease;
+
+        &:hover {
+          background-color: #33b249;
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .right {
+      flex: 1;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      justify-content: center;
+
+      h1 {
+        color: #555;
+        text-align: center;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        color: #010101;
+
+        input {
+          border: none;
+          border-bottom: 1px solid lightgray;
+          padding: 20px 10px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        button {
+          width: 100%;
+          padding: 10px;
+          border-radius: 20px;
+          border: none;
+          background-color: #55c2da;
+          font-weight: bold;
+          font-size: 16px;
+          cursor: pointer;
+          transition: 0.5s ease;
+
+          &:hover {
+            background-color: #4681f4;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}

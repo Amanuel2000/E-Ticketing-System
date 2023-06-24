@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="center">
         <div className="search">
           <input type="text" placeholder="Search football match..." />
-          <SearchOutlined style={{ cursor: "pointer" }}/>
+          <SearchOutlined style={{ cursor: "pointer", fontSize: "35px"}}/>
         </div>
       </div>
       <div className="right">

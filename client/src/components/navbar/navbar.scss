@@ -16,7 +16,8 @@
     align-items: center;
     gap: 30px;
 
-    span {
+    .nav-link {
+      text-decoration: none;
       font-weight: bold;
       font-size: 30px;
       color: #053b43;
@@ -27,7 +28,6 @@
     flex: 1.5;
     display: flex;
     align-items: center;
-    // justify-content: center;
     color: #053b43;
 
     .search {
@@ -67,33 +67,41 @@
     justify-content: space-between;
     gap: 20px;
 
-    span {
-      font-size: 20px;
-      color: #053b43;
-      position: relative;
-
-      &::after {
-        content: '';
-        width: 0;
-        height: 3px;
-        background: #ff004f;
-        position: absolute;
-        left: 0;
-        bottom: -6px;
-        transition: 0.5s;
-      }
-
-      &:hover::after {
-        width: 100%;
-      }
-    }
-
-    .user {
+    .nav {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 10px;
+      gap: 20px;
       font-weight: 500;
+
+      .nav-link {
+        font-size: 20px;
+        color: #053b43;
+        text-decoration: none;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &::after {
+          content: '';
+          width: 0;
+          height: 3px;
+          background: #ff004f;
+          position: absolute;
+          left: 0;
+          bottom: -6px;
+          transition: 0.5s;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+
+        &.active {
+          border: 1px solid #33302fbb;
+          border-radius: 5px;
+        }
+      }
 
       img {
         width: 30px;

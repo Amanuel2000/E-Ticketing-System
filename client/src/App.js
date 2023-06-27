@@ -61,11 +61,12 @@ function App() {
       path: "/register",
       element: <Register />
     }
-  ]);
+  
   return (
-      <div>
-        <RouterProvider router={router} />
-      </div>
-    );
+    <div>
+      <RouterProvider router={router} />
+    </div>
+  );
 }
+
 export default App;

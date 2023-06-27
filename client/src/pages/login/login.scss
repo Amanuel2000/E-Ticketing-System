@@ -1,0 +1,110 @@
+.login {
+  height: 100vh;
+  background-color: rgb(193, 190, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    width: 50%;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    min-height: 600px;
+    overflow: hidden;
+
+    .left {
+      flex: 1;
+      background: -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
+      background-size: cover;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: white;
+
+      h1 {
+        font-size: 60px;
+        text-align: center;
+        line-height: 100px;
+      }
+
+      span {
+        font-size: 14px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px;
+        border: none;
+        background-color: #5adbb5;
+        color: #010101;
+        font-weight: bold;
+        font-size: 16px;
+        position: relative;
+        bottom: 0;
+        cursor: pointer;
+        transition: background 0.5s, transform 0.5s;
+
+        &:hover {
+          background-color: #33b249;
+          background: linear-gradient(to right, rgba(100, 224, 127, 0.95), rgba(34, 227, 98, 0.95));
+          transform: translateY(-10px);
+        }
+      }
+    }
+
+    .right {
+      flex: 1;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+      h1 {
+        color: #555;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        color: #010101;
+
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      
+          input {
+            border: none;
+            border-bottom: 1px solid lightgray;
+            padding: 20px 10px;
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+
+        button {
+          width: 100%;
+          padding: 10px;
+          border-radius: 20px;
+          border: none;
+          background-color: #55c2da;
+          font-weight: bold;
+          font-size: 16px;
+          cursor: pointer;
+          transition: background 0.5s, transform 0.5s;
+
+          &:hover {
+            background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+            transform: translateY(-10px);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,45 +1,38 @@
-import React from 'react'
- 
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
-import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
-import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import { Link } from 'react-router-dom';
-import "./navbar.scss"
+import { SearchOutlined } from "@mui/icons-material";
+import "./navbar.scss";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className='navbar'>
-          <div className='left'>
-              <Link to="/" style={{textDecoration:"none"}}>
-                  <span>E-Ticketing</span>
-              </Link>
-              
-              <div className="navmenu">
-                  <span>Home</span>
-                  <span>Fixtures</span>
-                  <span>Request Ticket</span>
-                  <span>About</span>
-            </div>
-              <div className='search'>
-                  <SearchOutlinedIcon />
-                  <input type="text" placeholder='Search...'/>
-              </div>
-               
-          </div>        
-          <div className='right'>
-              <PersonOutlinedIcon />
-              <EmailOutlinedIcon />
-              <NotificationsOutlinedIcon />
-              <div className='user'>
-                  <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
-                  <span>Jhon Doe</span>
-
-              </div>
-          </div>  
-      
+    <div className="navbar">
+      <div className="left">
+        <div>
+          <NavLink to="/" className="nav-link">E-ticket</NavLink>
+        </div>
+      </div>
+      <div className="center">
+        <div className="search">
+          <input type="text" placeholder="Search football match..." />
+          <SearchOutlined style={{ cursor: "pointer" }}/>
+        </div>
+      </div>
+      <div className="right">
+        <div className="nav">
+          <NavLink to="/" className="nav-link">Home</NavLink>
+          <NavLink to="fixtures" className="nav-link">Fixtures</NavLink>
+          <NavLink to="about" className="nav-link">About Us</NavLink>
+          <NavLink to="contact" className="nav-link">Contact Us</NavLink>
+          <NavLink to="profile" className="nav-link">
+            <img
+            src="https://images.pexels.com/photos/322819/pexels-photo-322819.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            alt=""
+            />
+            Aman F.
+          </NavLink>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

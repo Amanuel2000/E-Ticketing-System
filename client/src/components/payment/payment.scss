@@ -1,0 +1,21 @@
+.payment{
+     padding: 20px;
+  .container{
+    
+ 
+      
+     
+      form{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        input {
+        border: none;
+        border-bottom: 1px solid lightgray;
+        padding: 20px 10px;
+        width: 400px;
+        }
+      }
+  }
+}

@@ -18,7 +18,7 @@ const RightBar = () => {
           <button>Adama</button>
           <button>Wolkite</button>
           <button>Dire Dawa</button>
-          <button className="sidebarButton">See More</button>
+          <button className="sidebarButton">See More...</button>
         </div>
         <span style={{textAlign:"center"}}>Suggested for you</span>
         <div className="item">

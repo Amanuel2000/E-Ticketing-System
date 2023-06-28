@@ -6,12 +6,14 @@ import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import RightBar from '../../components/rightBar/RightBar';
 import LeftBar from '../../components/leftbar/Leftbar';
+import { Link } from 'react-router-dom';
 
 
 const Fixtures = () => {
   return (
     <div className='fixture-page'>
       <LeftBar />
+
       <div className="fixture">
         <h1>All Upcoming Fixtures</h1>
         <div className="container">
@@ -20,115 +22,84 @@ const Fixtures = () => {
               <span><LocationOnOutlinedIcon style={{fontSize:"15px"}}/> AA Stadium</span>
               <span><CalendarMonthIcon style={{fontSize:"15px"}}/> 23 June 2023</span>
             </div>
-            <div className="team1">
+            <div className="team">
               <span>HAWASA KENEMA</span>
               <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
               <span><AccessTimeOutlinedIcon style={{fontSize:"15px"}}/> 15:00</span>
               <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
               <span>ADAMAN KENEMA</span>
             </div>
-            <button>Request Ticket</button>
+            <Link className="fix-btn" to="/ticket" >
+              <button>Request Ticket</button>
+            </Link>
           </div>
           <div className="card">
             <div className="desc">
               <span><LocationOnOutlinedIcon style={{fontSize:"15px"}}/> AA Stadium</span>
               <span><CalendarMonthIcon style={{fontSize:"15px"}}/> 23 June 2023</span>
             </div>
-            <div className="team1">
+            <div className="team">
               <span>HAWASA KENEMA</span>
               <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
               <span><AccessTimeOutlinedIcon style={{fontSize:"15px"}}/> 15:00</span>
               <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
               <span>ADAMAN KENEMA</span>
             </div>
-            <button>Request Ticket</button>
+            <Link className="fix-btn" to="/ticket" >
+              <button>Request Ticket</button>
+            </Link>
           </div>
           <div className="card">
             <div className="desc">
               <span><LocationOnOutlinedIcon style={{fontSize:"15px"}}/> AA Stadium</span>
               <span><CalendarMonthIcon style={{fontSize:"15px"}}/> 23 June 2023</span>
             </div>
-            <div className="team1">
+            <div className="team">
               <span>HAWASA KENEMA</span>
               <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
               <span><AccessTimeOutlinedIcon style={{fontSize:"15px"}}/> 15:00</span>
               <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
               <span>ADAMAN KENEMA</span>
             </div>
-            <button>Request Ticket</button>
+            <Link className="fix-btn" to="/ticket" >
+              <button>Request Ticket</button>
+            </Link>
           </div>
           <div className="card">
             <div className="desc">
               <span><LocationOnOutlinedIcon style={{fontSize:"15px"}}/> AA Stadium</span>
               <span><CalendarMonthIcon style={{fontSize:"15px"}}/> 23 June 2023</span>
             </div>
-            <div className="team1">
+            <div className="team">
               <span>HAWASA KENEMA</span>
               <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
               <span><AccessTimeOutlinedIcon style={{fontSize:"15px"}}/> 15:00</span>
               <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
               <span>ADAMAN KENEMA</span>
             </div>
-            <button>Request Ticket</button>
+            <Link className="fix-btn" to="/ticket" >
+              <button>Request Ticket</button>
+            </Link>
           </div>
           <div className="card">
             <div className="desc">
               <span><LocationOnOutlinedIcon style={{fontSize:"15px"}}/> AA Stadium</span>
               <span><CalendarMonthIcon style={{fontSize:"15px"}}/> 23 June 2023</span>
             </div>
-            <div className="team1">
+            <div className="team">
               <span>HAWASA KENEMA</span>
               <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
               <span><AccessTimeOutlinedIcon style={{fontSize:"15px"}}/> 15:00</span>
               <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
               <span>ADAMAN KENEMA</span>
             </div>
-            <button>Request Ticket</button>
-          </div>
-          <div className="card">
-            <div className="desc">
-              <span><LocationOnOutlinedIcon style={{fontSize:"15px"}}/> AA Stadium</span>
-              <span><CalendarMonthIcon style={{fontSize:"15px"}}/> 23 June 2023</span>
-            </div>
-            <div className="team1">
-              <span>HAWASA KENEMA</span>
-              <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
-              <span><AccessTimeOutlinedIcon style={{fontSize:"15px"}}/> 15:00</span>
-              <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
-              <span>ADAMAN KENEMA</span>
-            </div>
-            <button>Request Ticket</button>
-          </div>
-          <div className="card">
-            <div className="desc">
-              <span><LocationOnOutlinedIcon style={{fontSize:"15px"}}/> AA Stadium</span>
-              <span><CalendarMonthIcon style={{fontSize:"15px"}}/> 23 June 2023</span>
-            </div>
-            <div className="team1">
-              <span>HAWASA KENEMA</span>
-              <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
-              <span><AccessTimeOutlinedIcon style={{fontSize:"15px"}}/> 15:00</span>
-              <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
-              <span>ADAMAN KENEMA</span>
-            </div>
-            <button>Request Ticket</button>
-          </div>
-          <div className="card">
-            <div className="desc">
-              <span><LocationOnOutlinedIcon style={{fontSize:"15px"}}/> AA Stadium</span>
-              <span><CalendarMonthIcon style={{fontSize:"15px"}}/> 23 June 2023</span>
-            </div>
-            <div className="team1">
-              <span>HAWASA KENEMA</span>
-              <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
-              <span><AccessTimeOutlinedIcon style={{fontSize:"15px"}}/> 15:00</span>
-              <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
-              <span>ADAMAN KENEMA</span>
-            </div>
-            <button>Request Ticket</button>
+            <Link className="fix-btn" to="/ticket" >
+              <button>Request Ticket</button>
+            </Link>
           </div>
         </div>
       </div>
+
       <RightBar />
     </div>
   )

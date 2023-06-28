@@ -6,6 +6,8 @@ import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Profile from "./pages/profile/Profile";
 import Register from "./pages/register/Register";
+import Footer from "./components/footer/Footer";
+import Ticket from "./components/ticket/Ticket";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -13,8 +15,6 @@ import {
   Outlet,
   Navigate,
 } from "react-router-dom";
-import Footer from "./components/footer/Footer";
-import Ticket from "./components/ticket/Ticket";
 
 function App() {
   const Layout = () => {
@@ -53,6 +53,10 @@ function App() {
         {
           path: "/profile",
           element: <Profile />
+        },
+        {
+          path: "/ticket",
+          element: <Ticket />
         },
       ]
     },

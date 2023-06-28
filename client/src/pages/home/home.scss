@@ -3,13 +3,13 @@
   background-color: rgba(0, 0, 0, 0.6);
   background-image: url('https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   width: 100%;
-  height: calc(100vh - 50px);
+  height: 100vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
   position: relative;
-  
+
   .container {
     padding: 10px 10%;
     color: #fff;
@@ -50,47 +50,48 @@
       }
     }
   }
-  .container2 {
-    width: 100%;
-    height: calc(100vh - 50px);
-    background-color: #375a61b4;
+}
+.container2 {
+  margin-top: -30px;
+  width: 100%;
+  height: 100vh;
+  background-color: #375a61b4;
 
-    h1 {
-      text-align: center;
-    }
-    .how-it-work {
-      width: 50%;
+  h1 {
+    text-align: center;
+  }
+  .how-it-work {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px auto;
+
+    div {
+      margin: 20px;
+      padding: 10px;
       display: flex;
-      justify-content: center;
-      flex-direction: column;
-      margin: 30px auto;
+      justify-content: space-between;
+      font-size: 20px;
 
-      div {
-        margin: 20px;
+      p {
+        margin: auto 0;
+      }
+
+      button {
+        width: 30%;
         padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        font-size: 20px;
+        margin: 20px 0;
+        border: none;
+        background-color: #2cadf8;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.5s, transform 0.5s;
 
-        p {
-          margin: auto 0;
-        }
-
-        button {
-          width: 30%;
-          padding: 10px;
-          margin: 20px 0;
-          border: none;
-          background-color: #2cadf8;
-          font-weight: bold;
-          font-size: 16px;
-          cursor: pointer;
-          transition: background 0.5s, transform 0.5s;
-
-          &:hover {
-            background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
-            transform: translateY(-10px);
-          }
+        &:hover {
+          background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+          transform: translateY(-10px);
         }
       }
     }

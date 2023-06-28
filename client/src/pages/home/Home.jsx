@@ -6,12 +6,14 @@ import PaymentMethod from '../../components/paymentMethod/PaymentMethod'
 
 const Home = () => {
   return (
-    <div className="home">
-      <div className="container">
-        <div className="header-text">
-          <h1>Welcome <span>E-ticket</span></h1>
-          <p>Get all football matches tickets here...</p>
-          <button>Get Started</button>
+    <div>
+      <div className="home">
+        <div className="container">
+          <div className="header-text">
+            <h1>Welcome <span>E-ticket</span></h1>
+            <p>Get all football matches tickets here...</p>
+            <button>Get Started</button>
+          </div>
         </div>
       </div>
       <div className="container2">

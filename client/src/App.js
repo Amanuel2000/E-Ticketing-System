@@ -14,6 +14,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import Footer from "./components/footer/Footer";
+import Ticket from "./components/ticket/Ticket";
 
 function App() {
   const Layout = () => {
@@ -64,8 +65,8 @@ function App() {
       element: <Register />
     },
     {
-      path: "/footer",
-      element: <Footer />
+      path: "/ticket",
+      element: <Ticket />
     }
   ]);
 

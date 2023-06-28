@@ -13,7 +13,7 @@ const Fixtures = () => {
     <div className='fixture-page'>
       <LeftBar />
       <div className="fixture">
-        <h2 style={{textAlign: "center", padding: "10px", gap: "10px"}}>All Upcoming Fixtures</h2>
+        <h1>All Upcoming Fixtures</h1>
         <div className="container">
           <div className="card">
             <div className="desc">

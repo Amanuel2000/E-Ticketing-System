@@ -3,7 +3,7 @@
   background-color: rgba(0, 0, 0, 0.6);
   background-image: url('https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 50px);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -42,6 +42,11 @@
         font-size: 16px;
         cursor: pointer;
         transition: background 0.5s, transform 0.5s;
+        
+        a {
+          text-decoration: none;
+          color: #000;
+        }
 
         &:hover {
           background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
@@ -57,41 +62,49 @@
   height: 100vh;
   background-color: #375a61b4;
 
-  h1 {
-    text-align: center;
-  }
-  .how-it-work {
+  #how-it-work {
     width: 50%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin: 30px auto;
-
-    div {
-      margin: 20px;
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 20px;
-
-      p {
-        margin: auto 0;
-      }
-
-      button {
-        width: 30%;
-        padding: 10px;
-        margin: 20px 0;
-        border: none;
-        background-color: #2cadf8;
-        font-weight: bold;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background 0.5s, transform 0.5s;
-
-        &:hover {
-          background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
-          transform: translateY(-10px);
+    
+    h1 {
+      margin: 50px 0;
+      text-align: center;
+    }
+    .card {
+      background-color: #fff;
+      color: #333;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      margin: 10px;
+      
+      div {
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+  
+        p {
+          margin: auto 0;
+        }
+  
+        button {
+          width: 100%;
+          padding: 10px;
+          margin: 20px 0;
+          border: none;
+          background-color: #2cadf8;
+          font-weight: bold;
+          font-size: 16px;
+          cursor: pointer;
+          transition: background 0.5s, transform 0.5s;
+  
+          &:hover {
+            background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+            transform: translateY(-10px);
+          }
         }
       }
     }

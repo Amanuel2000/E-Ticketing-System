@@ -3,6 +3,7 @@ import "./home.scss"
 import Payment from '../../components/payment/Payment'
 import Ticket from '../../components/ticket/Ticket'
 import PaymentMethod from '../../components/paymentMethod/PaymentMethod'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -10,30 +11,40 @@ const Home = () => {
       <div className="home">
         <div className="container">
           <div className="header-text">
-            <h1>Welcome <span>E-ticket</span></h1>
+            <h1>Welcome to <span>E-ticket</span></h1>
             <p>Get all football matches tickets here...</p>
-            <button>Get Started</button>
+            <button><a href='#how-it-work'>Get Started</a></button>
           </div>
         </div>
       </div>
       <div className="container2">
-        <div className="how-it-work">
+        <div id='how-it-work'>
           <h1>How it works</h1>
-          <div>
-            <p>Select your favorite match here...</p>
-            <button>Favorite Match</button>
-          </div>
-          <div>
-            <p>Get your ticket...</p>
-            <button>Get Ticket</button>
-          </div>
-          <div>
-            <p>Go to payment your ticket...</p>
-            <button>Go to payment</button>
-          </div>
-          <div>
-            <p>Get your QRCode...</p>
-            <button>Generate your QRCode</button>
+          <div className="card">
+            <div>
+              <p>Select your favorite match here...</p>
+              <Link to="/fixtures">
+                <button>All Fixtures</button>
+              </Link>
+            </div>
+            <div>
+              <p>Get your ticket...</p>
+              <Link to="/ticket">
+                <button>Get Ticket</button>
+              </Link>
+            </div>
+            <div>
+              <p>Go to payment your ticket...</p>
+              <Link to="/payment">
+                <button>Go to payment</button>
+              </Link>
+            </div>
+            <div>
+              <p>Get your QRCode...</p>
+              <Link to="/generate">
+                <button>Generate your QRCode</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

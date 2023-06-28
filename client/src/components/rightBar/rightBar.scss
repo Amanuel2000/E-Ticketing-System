@@ -1,85 +1,71 @@
+.rightBar {
+  flex: 3;
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 70px);
+  overflow: scroll;
 
-.rightBar{
-    flex: 3;
-    position: sticky;
-    top: 70px;
-    height: calc(100vh - 70px);
-    overflow: scroll;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+  .container {
+    padding: 20px;
+    gap: 10px;
 
-    &::-webkit-scrollbar{
-        display: none;
-    }
-    .container{
-        padding: 20px;
-        gap: 10px;
-  
-    .item{
-        text-align: center;
+    .item {
+      text-align: center;
+      align-items: center;
+      -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+      -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+      box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+      padding: 20px;
+      margin-bottom: 20px;
+
+      .desc {
+        display: flex;
         align-items: center;
+        justify-content: space-between;
+      }
       
-            
+      span {
+        color: gray;
+      }
+
+  }
+  .team1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+
+    .teamInfo {
+      display: flex;
+      align-items: center;              
+      gap: 20px;
+      span {
+          font-size: 12px;
+          align-items: center;
+      }
+      .time{
+        display: flex;
+        align-items: center;
         span {
-          color: gray;
-        }   
-    
-             
-         -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
-        -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
-        box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
-        padding: 20px;
-        margin-bottom: 20px;
-        .desc{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
+          font-size: 12px;
         }
-     
-        }
-            .team1{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 20px;
-                gap: 20px;
-
-
-          
-                .teamInfo{
-                display: flex;
-                align-items: center;              
-                gap: 20px;
-                span{
-                    font-size: 12px;
-                    align-items: center;
-                }
-                .time{
-                    display: flex;
-                    align-items: center;
-                    span{
-                        font-size: 12px;
-                    }
-                }
-
-                img{
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    object-fit: cover;
-                    
-                }
-
-                }
-                .team2{
-                      
-                    display: flex;
-                    align-items: center;
-                      justify-content: space-between;
-                }
-              
-              
-             
-        }
-        }
+      }
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
     }
-  
+    .team2{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+}

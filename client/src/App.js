@@ -13,6 +13,7 @@ import {
   Outlet,
   Navigate,
 } from "react-router-dom";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const Layout = () => {
@@ -22,10 +23,11 @@ function App() {
         <div>
           <Outlet />
         </div>
+        <Footer />
       </div>
     );
   };
-  
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -60,8 +62,13 @@ function App() {
     {
       path: "/register",
       element: <Register />
+    },
+    {
+      path: "/footer",
+      element: <Footer />
     }
-  
+  ]);
+
   return (
     <div>
       <RouterProvider router={router} />

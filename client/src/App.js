@@ -14,7 +14,6 @@ import {
   Navigate,
 } from "react-router-dom";
 import Footer from "./components/footer/Footer";
-import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {
   const Layout = () => {
@@ -67,10 +66,6 @@ function App() {
     {
       path: "/footer",
       element: <Footer />
-    },
-    {
-      path: "/sidebar",
-      element: <Sidebar />
     }
   ]);
 

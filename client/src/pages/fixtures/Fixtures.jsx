@@ -4,14 +4,14 @@ import "./fixtures.scss"
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
-import Sidebar from '../../components/sidebar/Sidebar';
 import RightBar from '../../components/rightBar/RightBar';
+import LeftBar from '../../components/leftbar/Leftbar';
 
 
 const Fixtures = () => {
   return (
     <div className='fixture-page'>
-      <Sidebar />
+      <LeftBar />
       <div className="fixture">
         <h2 style={{textAlign: "center", padding: "10px", gap: "10px"}}>All Upcoming Fixtures</h2>
         <div className="container">

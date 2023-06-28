@@ -1,32 +1,14 @@
-import React from 'react'
-import "./leftBar.scss"
+import Dropdown from '../dropdown/Dropdown'
+import './leftbar.scss'
+import { BookmarkAdd, ChatOutlined, GroupOutlined, HelpOutline, PlayCircleFilledOutlined, RssFeedOutlined, SchoolOutlined } from '@mui/icons-material'
 
-const LeftBar = () => {
+export default function LeftBar() {
   return (
-    <div className='leftBar'>
-      <div className="container">
-        <div className="menu">
-          <div className="user">
-            <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
-            <span>Jhon Doe</span>
-          </div>
-        </div>
-        <hr />
-        <div className="menu">
-          <span>Your Shortcuts</span>
-        </div>
-        <div className="menu">
-          <span>Your Shortcuts</span>
-        </div>
-        <div className="menu">
-          <span>Your Shortcuts</span>
-        </div>
-        <div className="menu">
-          <span>Your Shortcuts</span>
-        </div>
+    <div className='leftbar'>
+      <div className="leftbarWrapper">
+        <button className="leftbarButton">Category</button>
+        <Dropdown />
       </div>
     </div>
   )
 }
-
-export default LeftBar

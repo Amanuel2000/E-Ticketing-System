@@ -1,4 +1,4 @@
-import Dropdown from '../dropdown/Dropdown'
+import Dropdown from '../dropdown/Dropdown-fixture'
 import './leftbar.scss'
 import { BookmarkAdd, ChatOutlined, GroupOutlined, HelpOutline, PlayCircleFilledOutlined, RssFeedOutlined, SchoolOutlined } from '@mui/icons-material'
 

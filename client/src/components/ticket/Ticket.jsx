@@ -1,5 +1,5 @@
 import "./ticket.scss"
-import Dropdown from '../dropdown/Dropdown';
+import Dropdown from '../dropdown/Dropdown-ticket';
 import { Link, NavLink } from "react-router-dom";
 
 const Ticket = () => {
@@ -19,7 +19,7 @@ const Ticket = () => {
             </div>
             <div className="form-row">
               <label htmlFor="">Select Price</label>
-              <Dropdown className="dropdown"/>
+              <Dropdown />
             </div>
             <div className="form-row">
               <label htmlFor="">Number of Applicants</label>

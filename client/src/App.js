@@ -7,9 +7,9 @@ import Login from "./pages/login/Login";
 import Profile from "./pages/profile/Profile";
 import Register from "./pages/register/Register";
 import Footer from "./components/footer/Footer";
-import Ticket from "./components/ticket/Ticket";
-import Payment from "./components/payment/Payment";
-import GenerateQRC from "./components/generateQRC/GenerateQRC";
+import Ticket from "./pages/ticket/Ticket";
+import Payment from "./pages/payment/Payment";
+import GenerateQRC from "./pages/generateQRC/GenerateQRC";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -24,7 +24,6 @@ function App() {
         <div>
           <Outlet />
         </div>
-        <Footer />
       </div>
     );
   };

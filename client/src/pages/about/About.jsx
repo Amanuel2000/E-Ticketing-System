@@ -1,3 +1,4 @@
+import Footer from '../../components/footer/Footer';
 import './about.scss'
 
 const About = () => {
@@ -35,6 +36,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 };

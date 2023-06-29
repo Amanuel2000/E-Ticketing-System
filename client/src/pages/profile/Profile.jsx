@@ -1,8 +1,12 @@
+import Footer from "../../components/footer/Footer";
 import "./profile.scss"
 
 const Profile = () => {
   return (
-    <div>Profile</div>
+    <div>
+      Profile
+      <Footer />
+    </div>
   )
 };
 

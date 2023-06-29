@@ -1,21 +1,34 @@
-import React from 'react'
 import "./payment.scss"
+import Dropdown from '../dropdown/Dropdown-payment';
+import { Link, NavLink } from "react-router-dom";
 
 const Payment = () => {
   return (
     <div className="payment">
-      <h2 style={{textAlign:"center"}}>Settle Your Payment</h2>
       <div className="container">
-        <form>
-          <input type="text" placeholder="Game Name" />
-          <input type="text" placeholder="Game Type" />
-          <input type="text" placeholder="Ticket Name" />
-          <input type="text" placeholder="Ticket Type" />
-          <button>Submit</button>
-        </form>
+        <h1 className="title">Pay for your Ticket</h1>
+        <div className="card">
+          <form method="POST">
+            <div className="form-row">
+              <label htmlFor="">Select Payment Method</label>
+              <Dropdown />
+            </div>
+            <div className="form-row">
+              <label htmlFor="">Phone Number</label>
+              <input type="text" name="phone-number" />
+            </div>
+          </form>
+          <div className="btn">
+            <Link to="/fixtures/ticket/payment/generate">
+              <button>Generate your QRCode</button>
+            </Link>
+            <Link to="/fixtures/ticket">
+              <button>Go Back To Ticket Page</button>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   )
-}
-
-export default Payment
+};
+export default Payment;

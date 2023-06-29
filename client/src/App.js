@@ -15,6 +15,8 @@ import {
   Outlet,
   Navigate,
 } from "react-router-dom";
+import Payment from "./components/payment/Payment";
+import GenerateQRC from "./components/generateQRC/GenerateQRC";
 
 function App() {
   const Layout = () => {
@@ -55,8 +57,16 @@ function App() {
           element: <Profile />
         },
         {
-          path: "/ticket",
+          path: "fixtures/ticket",
           element: <Ticket />
+        },
+        {
+          path: "fixtures/ticket/payment",
+          element: <Payment />
+        },
+        {
+          path: "fixtures/ticket/payment/generate",
+          element: <GenerateQRC />
         },
       ]
     },

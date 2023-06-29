@@ -29,7 +29,7 @@ const Fixtures = () => {
               <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
               <span>ADAMAN KENEMA</span>
             </div>
-            <Link className="fix-btn" to="/ticket" >
+            <Link className="fix-btn" to="/fixtures/ticket" >
               <button>Request Ticket</button>
             </Link>
           </div>

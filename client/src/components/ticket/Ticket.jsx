@@ -31,7 +31,7 @@ const Ticket = () => {
             </div>
           </form>
           <div className="btn">
-            <Link to="/payment">
+            <Link to="/fixtures/ticket/payment">
               <button>Go To Payment</button>
             </Link>
             <Link to="/fixtures">

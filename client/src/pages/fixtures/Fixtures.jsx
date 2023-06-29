@@ -5,7 +5,7 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import RightBar from '../../components/rightBar/RightBar';
-import LeftBar from '../../components/leftbar/Leftbar';
+import LeftBar from '../../components/leftBar/LeftBar';
 import { Link } from 'react-router-dom';
 
 

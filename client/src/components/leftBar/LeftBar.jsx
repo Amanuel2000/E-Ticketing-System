@@ -1,14 +1,14 @@
 import Dropdown from '../dropdown/Dropdown-fixture'
-import './leftbar.scss'
-import { BookmarkAdd, ChatOutlined, GroupOutlined, HelpOutline, PlayCircleFilledOutlined, RssFeedOutlined, SchoolOutlined } from '@mui/icons-material'
+import './leftBar.scss'
 
-export default function LeftBar() {
+const LeftBar = () => {
   return (
-    <div className='leftbar'>
-      <div className="leftbarWrapper">
-        <button className="leftbarButton">Category</button>
+    <div className='leftBar'>
+      <div className="leftBarWrapper">
+        <button className="leftBarButton">Category</button>
         <Dropdown />
       </div>
     </div>
   )
 }
+export default LeftBar;

@@ -8,15 +8,13 @@ import Profile from "./pages/profile/Profile";
 import Register from "./pages/register/Register";
 import Footer from "./components/footer/Footer";
 import Ticket from "./components/ticket/Ticket";
+import Payment from "./components/payment/Payment";
+import GenerateQRC from "./components/generateQRC/GenerateQRC";
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Outlet,
-  Navigate,
+  Outlet
 } from "react-router-dom";
-import Payment from "./components/payment/Payment";
-import GenerateQRC from "./components/generateQRC/GenerateQRC";
 
 function App() {
   const Layout = () => {

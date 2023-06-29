@@ -1,6 +1,6 @@
 import "./ticket.scss"
 import Dropdown from '../dropdown/Dropdown-ticket';
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Ticket = () => {
   return (

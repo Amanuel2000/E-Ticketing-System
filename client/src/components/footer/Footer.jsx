@@ -2,7 +2,7 @@ import { Link, NavLink } from 'react-router-dom'
 import './footer.scss'
 import { Facebook, GitHub, LinkedIn, Twitter } from '@mui/icons-material'
 
-export default function Footer() {
+const Footer = () => {
   return (
     <div class="footer">
       <div class="container">
@@ -26,3 +26,4 @@ export default function Footer() {
     </div>
   )
 }
+export default Footer;

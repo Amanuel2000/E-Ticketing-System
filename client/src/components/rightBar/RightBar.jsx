@@ -1,6 +1,5 @@
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import React from 'react'
 import "./rightBar.scss"
 

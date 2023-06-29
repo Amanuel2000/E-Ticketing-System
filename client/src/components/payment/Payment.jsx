@@ -1,6 +1,6 @@
 import "./payment.scss"
 import Dropdown from '../dropdown/Dropdown-payment';
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Payment = () => {
   return (

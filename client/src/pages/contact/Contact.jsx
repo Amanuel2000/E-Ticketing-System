@@ -1,7 +1,9 @@
 import "./contact.scss"
 
-export default function Contact() {
+const Contact = () => {
   return (
     <div>Contact Us</div>
   )
-}
+};
+
+export default Contact;

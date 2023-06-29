@@ -1,8 +1,5 @@
 import React from 'react'
 import "./home.scss"
-import Payment from '../../components/payment/Payment'
-import Ticket from '../../components/ticket/Ticket'
-import PaymentMethod from '../../components/paymentMethod/PaymentMethod'
 import { Link } from 'react-router-dom'
 
 const Home = () => {

@@ -35,7 +35,9 @@ const Register = () => {
               <Lock style={{ color: "#21465b" }}/>
               <input type="password" placeholder="Confirm Password" />
             </div>
-            <button>Register</button>
+            <Link to="/fixtures">
+              <button>Register</button>
+            </Link>
           </form>
         </div>
       </div>

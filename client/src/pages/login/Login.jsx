@@ -27,7 +27,9 @@ const Login = () => {
               <Lock style={{ color: "#21465b" }}/>
               <input type="password" placeholder="Password" />
             </div>
-            <button>Login</button>
+            <Link to="/fixtures">
+              <button>Login</button>
+            </Link>
           </form>
         </div>
       </div>

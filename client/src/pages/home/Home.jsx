@@ -9,7 +9,7 @@ const Home = () => {
         <div className="container">
           <div className="header-text">
             <h1>Welcome to <span>E-ticket</span></h1>
-            <p>Get all football matches tickets here...</p>
+            <p>Get all Ethiopian Premier League Football matches tickets here...</p>
             <Link to='/login'>
               <button>Get Started</button>
             </Link>

@@ -8,7 +8,7 @@ const Ticket = () => {
     <div>
       <div className="ticket">
         <div className="container">
-          <h1 className="title">Get your ticket</h1>
+          <h1>Get your ticket</h1>
           <div className="card">
             <form method="POST">
               <div className="form-row">

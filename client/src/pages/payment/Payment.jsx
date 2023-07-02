@@ -8,7 +8,7 @@ const Payment = () => {
     <div>
       <div className="payment">
         <div className="container">
-          <h1 className="title">Pay for your Ticket</h1>
+          <h1>Pay for your Ticket</h1>
           <div className="card">
             <form method="POST">
               <div className="form-row">

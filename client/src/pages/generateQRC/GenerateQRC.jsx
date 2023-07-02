@@ -1,6 +1,5 @@
 import "./generateQRC.scss"
-import Dropdown from '../../components/dropdown/Dropdown-payment';
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 
 const GenerateQRC = () => {

@@ -12,7 +12,7 @@ const About = () => {
           <img src="assets/Aman.jpeg" alt="Aman" />
           <div className="container">
             <h2>Amanuel Fenta</h2>
-            <p>Full Stack Software Engineer</p>
+            <p className="title">Full Stack Software Engineer</p>
             <p> I am a software engineer with interest in solving real-world problems with technology and dependable leadership.</p>
             <p><b>Email:</b> aman@gmail.com</p>
             <p><b>Phone Number:</b> +251-910-009-313</p>

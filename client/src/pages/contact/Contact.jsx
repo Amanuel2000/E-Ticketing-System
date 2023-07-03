@@ -7,20 +7,20 @@ const Contact = () => {
     <div>
       <div className="container">
         <div className="contact-left">
-          <h1>Contact Us</h1>
+          <h2>Contact Us</h2>
           <div className="social-icons">
             <ul>
               <li>
-                <span><Facebook style={{fontSize: "35px"}} /></span>
+                <span><Facebook style={{fontSize: "40px"}} /></span>
               </li>
               <li>
-                <span><LinkedIn style={{fontSize: "35px"}} /></span>
+                <span><LinkedIn style={{fontSize: "40px"}} /></span>
               </li>
               <li>
-                <span><GitHub style={{fontSize: "35px"}} /></span>
+                <span><GitHub style={{fontSize: "40px"}} /></span>
               </li>
               <li>
-                <span><Twitter style={{fontSize: "35px"}} /></span>
+                <span><Twitter style={{fontSize: "40px"}} /></span>
               </li>
             </ul>
           </div>

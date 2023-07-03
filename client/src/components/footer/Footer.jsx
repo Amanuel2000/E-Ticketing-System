@@ -17,10 +17,20 @@ const Footer = () => {
           <NavLink to="contact" className="nav-link">Contact Us</NavLink>
         </div>
         <div class="right">
-          <a href="www.github.com"><GitHub style={{ fontSize: "40px", color: "#fff", margin: "10px" }}/></a>
-          <a href="ww.facebook.com"><Facebook style={{ fontSize: "40px", color: "#fff", margin: "10px"}}/></a>
-          <a href="www.linkedin.com"><LinkedIn style={{ fontSize: "40px", color: "#fff", margin: "10px" }}/></a>
-          <a href="www.twitter.com"><Twitter style={{ fontSize: "40px", color: "#fff", margin: "10px" }}/></a>
+          <ul>
+              <li>
+                <span><Facebook style={{fontSize: "40px"}} /></span>
+              </li>
+              <li>
+                <span><LinkedIn style={{fontSize: "40px"}} /></span>
+              </li>
+              <li>
+                <span><GitHub style={{fontSize: "40px"}} /></span>
+              </li>
+              <li>
+                <span><Twitter style={{fontSize: "40px"}} /></span>
+              </li>
+            </ul>
         </div>
       </div>
     </div>

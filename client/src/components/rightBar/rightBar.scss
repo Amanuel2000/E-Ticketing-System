@@ -5,7 +5,7 @@
   position: sticky;
 
   &::-webkit-scrollbar {
-      width: 5px;
+    width: 5px;
   }
 
   &::-webkit-scrollbar-track {
@@ -15,7 +15,7 @@
   &::-webkit-scrollbar-thumb {
     background-color: rgb(179, 179, 179);
   }
-  .container {
+  .rightBarWrapper {
     padding: 20px;
 
     .card {
@@ -25,74 +25,54 @@
       border-radius: 10px;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
       padding: 20px;
-      margin: 10px;
       display: flex;
       flex-direction: column;
+      margin-bottom: 20px;
+      margin-right: 15px;
+      
       button {
         padding: 10px;
         text-align: left;
       }
       .sidebarButton {
         text-align: center;
-        width: 150px;
+        width: 100%;
         border: none;
         padding: 10px;
         border-radius: 5px;
         font-weight: 500;
         margin: 0 auto;
-      }
-    }
-    .item {
-      text-align: center;
-      align-items: center;
-      box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
-      padding: 20px;
-      margin-bottom: 20px;
+        cursor: pointer;
 
-      .desc {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      
-      span {
-        color: gray;
-      }
-    }
-  }
-  .team1 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    gap: 20px;
-
-    .teamInfo {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      span {
-          font-size: 12px;
-          align-items: center;
-      }
-      .time{
-        display: flex;
-        align-items: center;
-        span {
-          font-size: 12px;
+        &:hover {
+          font-weight: 700;
         }
       }
-      img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
     }
-    .team2{
+    .event {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      flex-direction: column;
+      span {
+        margin: 10px 0;
+        font-size: 20px;
+      }
+      .item {
+        text-align: center;
+        align-items: center;
+        box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+        padding: 20px;
+        margin-bottom: 20px;
+  
+        .desc {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          
+          p {
+            color: gray;
+          }
+        }
+      }
     }
   }
 }

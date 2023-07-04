@@ -17,22 +17,7 @@
   }
   .leftBarWrapper {
     padding: 20px;
-    .leftBarList {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-  
-      .leftBarListItem {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-  
-        .leftBarIcon {
-          margin-right: 15px;
-        }
-    }
-  
-    }
+
     .leftBarButton {
       width: 160px;
       border: none;

@@ -1,0 +1,115 @@
+/* .payment {
+  // background: -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
+  // height: 100vh;
+} */
+.pay_container {
+  box-shadow: 0px 0px 25px -10px #00000061;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pay_container h1 {
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+}
+.summary_card {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+.pay_card, .ticket_summary_card {
+  width: 70%;
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.ticket_summary_card {
+  padding: 25px 40px;
+}
+
+.ticket_summary_card h2 {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 24px;
+}
+.pay_card form {
+  width: 100%;
+  padding: 10px;
+}
+form .form-row {
+  margin: 10px;
+}
+.form-row label {
+  flex: 1;
+  font-weight: 700;
+}
+
+.form-row input {
+  flex: 5;
+  width: 97%;
+  height: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.form-row .ord-num {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  position: relative;
+}
+.ord-num .copy-btn {
+  padding: 10px;
+  color: #fff;
+  background: #333;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.pay_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Media queries (medium screen)*/
+@media screen and (max-width: 1024px) {
+  .pay_card,
+  .ticket_summary_card {
+    width: 90%;
+    padding: 10px;
+  }
+  .summary_card {
+    width: 90%;
+  }
+}
+
+/* Media queries (small screen)*/
+@media screen and (max-width: 600px) {
+  .pay_card,
+  .ticket_summary_card {
+    width: 96%;
+  }
+  .summary_card {
+    flex-direction: column;
+    width: 96%;
+  }
+
+  .pay_btn {
+    gap: 5px;
+  }
+  .pay_btn button {
+    padding: 5px;
+    font-weight: 300;
+  }
+}

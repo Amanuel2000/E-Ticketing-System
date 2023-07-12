@@ -1,10 +1,17 @@
 import "./payment.css"
-import Dropdown from '../../components/dropdown/Dropdown-payment';
+import Select from "react-select";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { useState } from "react";
 
 const Payment = () => {
+  const options = [
+    {value: "telebirr", label: "telebirr"},
+    {value: "CBEbirr", label: "CBEbirr"},
+    {value: "HelloCash", label: "HelloCash"},
+    {value: "Amole", label: "Amole"},
+  ];
+
   const [text, setText] = useState('');
 
   const inputHandler = event => {
@@ -13,7 +20,7 @@ const Payment = () => {
 
   const copy = async () => {
     await navigator.clipboard.writeText(text);
-    alert('Text copied');
+    alert('copied');
   }
   return (
     <div>
@@ -38,13 +45,13 @@ const Payment = () => {
             <form method="POST">
               <div className="form-row">
                 <label htmlFor="">Select Payment Method</label>
-                <Dropdown />
+                <Select options={options} />
               </div>
               <div className="form-row">
                 <label htmlFor="">Order Number</label>
-                <div className="ord-num">
+                <div className="ord-num-cpy">
                   <input type="text" value={text} onChange={inputHandler} />
-                  <button className="copy-btn" onClick={copy} disabled={!text}>Copy</button>
+                  <button onClick={copy} disabled={!text}>Copy</button>
                 </div>
               </div>
             </form>
@@ -56,7 +63,6 @@ const Payment = () => {
                 <button className="btn">Generate your QRCode <AiOutlineArrowRight /></button>
               </Link>
             </div>
-            
           </div>
         </div>
       </div>

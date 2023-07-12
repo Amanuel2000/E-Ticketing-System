@@ -55,7 +55,9 @@
   cursor: pointer;
   font-size: 1.3rem;
 }
-
+.about-container .about-btn:hover {
+  background-color: var(--color-primary-variant);
+}
 
 /* Media queries (medium screen)*/
 

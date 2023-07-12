@@ -65,14 +65,9 @@ form .form-row {
   font-weight: 700;
 }
 
-.form-row input {
-  flex: 5;
-  width: 97%;
-  height: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  justify-content: center;
-  align-items: center;
+form .form-row input {
+  border: none;
+  border: 1px solid lightgray;
 }
 .order-number form input[type="submit"] {
   cursor: pointer;

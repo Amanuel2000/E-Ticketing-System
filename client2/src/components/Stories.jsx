@@ -26,7 +26,8 @@ const Stories = () => {
                       <h2>{title}</h2>
                       <p>{desc}</p>
                       <br />
-                      <Link to='/register' style={{color:"#ccc", fontWeight:"700"}}>Get Started Here</Link>
+                      <br />
+                      <Link to='/register'><button className='btn'>Get Started Here</button></Link>
                     </Card>
                   )
                 })

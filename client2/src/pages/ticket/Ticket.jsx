@@ -1,9 +1,23 @@
 import "./ticket.css"
-import Dropdown from '../../components/dropdown/Dropdown-ticket';
+import Select from "react-select";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 
 const Ticket = () => {
+  const payOptions = [
+    {value: "VIP 200ETB", label: "VIP 200ETB"},
+    {value: "Standard 100ETB", label: "Standard 100ETB"},
+    {value: "Semi 50ETB", label: "Semi 50ETB"},
+    {value: "Ordinary 20ETB", label: "Ordinary 20ETB"},
+  ];
+
+  const numOptions = [
+    {value: "1", label: "1"},
+    {value: "2", label: "2"},
+    {value: "3", label: "3"},
+    {value: "4", label: "4"},
+  ];
+
   return (
     <div>
       <div className="ticket">
@@ -19,11 +33,11 @@ const Ticket = () => {
             <form method="POST">
               <div className="form-row">
                 <label>Select Ticket Type and Price</label>
-                <Dropdown />
+                <Select options={payOptions} />
               </div>
               <div className="form-row">
                 <label htmlFor="">Number of Applicants</label>
-                <Dropdown />
+                <Select options={numOptions} />
               </div>
               <div className="form-row">
                 <label htmlFor="">Total Price</label>

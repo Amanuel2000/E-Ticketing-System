@@ -1,29 +1,19 @@
 .fixtures {
   display: flex;
 }
+
 /* Left side content */
 .leftBar {
   flex: 1;
   height: calc(100vh - 50px);
-  overflow-y: scroll;
   position: sticky;
-}
-/*leftBar Scrollbar */
-.leftBar::-webkit-scrollbar {
-  width: 5px;
-}
-
-.leftBar::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
-}
-
-.leftBar::-webkit-scrollbar-thumb {
-  background-color: rgb(179, 179, 179);
+  top: 4rem;
 }
 
 .leftBarWrapper {
   padding: 20px;
 }
+
 .leftBarButton {
   width: 160px;
   border: none;
@@ -44,6 +34,7 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .fixture-content h1 {
   text-align: center;
   padding: 10px;
@@ -61,6 +52,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .fixture-card .desc {
   display: flex;
   align-items: center;
@@ -74,6 +66,7 @@
   gap: 10px;
   margin: 30px;
 }
+
 .fixture-card .team img {
   width: 60px;
   height: 60px;
@@ -85,27 +78,19 @@
 .rightBar {
   flex: 1.5;
   height: calc(100vh - 50px);
-  overflow-y: scroll;
   position: sticky;
-}
-.rightBar::-webkit-scrollbar {
-  width: 5px;
-}
-
-.rightBar::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
-}
-
-.rightBar::-webkit-scrollbar-thumb {
-  background-color: rgb(179, 179, 179);
+  top: 4rem;
 }
 
 .rightBarWrapper {
   padding: 20px;
 }
+
 .rightBar-card {
-  width: 90%;
+  width: 100%;
+  height: 50vh;
   background-color: #fff;
+  overflow-y: scroll;
   color: #333;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -113,11 +98,13 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-  margin-right: 15px;
 }
+
 .rightBar-card button {
   padding: 10px;
   text-align: left;
+  border: none;
+  border: 1px solid lightgray;
 }
 
 .rightBar-card .sidebarButton {
@@ -130,6 +117,7 @@
   margin: 0 auto;
   cursor: pointer;
 }
+
 .rightBar-card .sidebarButton:hover {
   font-weight: 700;
 }
@@ -138,29 +126,30 @@
   display: flex;
   flex-direction: column;
 }
+
 .event span {
-  margin: 10px 0;
-  font-size: 20px;
+  margin: 5px 0;
+  /* font-size: 20px; */
 }
 
 .event .item {
   text-align: center;
   align-items: center;
-  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
   padding: 20px;
   margin-bottom: 20px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
+
 .item .desc {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
 }
-.desc p {
-  color: gray;
+
+.item .desc p {
+  color: rgba(0, 0, 0, 0.8);
 }
 
 /* Media Queries (medium screen) */
@@ -169,13 +158,16 @@
     display: flex;
     flex-direction: column;
   }
+
   .leftBar {
     overflow-y: hidden;
     height: calc(50vh - 50px);
   }
+
   .rightBar {
     height: calc(30vh - 50px);
   }
+
   .rightBar-card {
     width: 100%;
   }
@@ -191,7 +183,7 @@
   .fixture-card .team {
     flex-direction: column;
   }
-  
+
   .fix-btn button {
     width: 100%;
   }

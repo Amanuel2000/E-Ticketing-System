@@ -77,8 +77,8 @@ const faqs = [
     },
     {
         id: 6,
-        question: "Do I get the ticket for other sports activities rather than a football match?",
-        answer: "At the moment, on this website, you can only get tickets for all Ethiopian Premier League games; however, in the future, we will add tickets for other sports activities too."
+        question: "Can I get a ticket for other sports activities?",
+        answer: "At the moment, on this website, you can only get tickets for all Ethiopian Premier League games; however, in the future, you can get ticket for other sports activities too."
     }
 ]
 

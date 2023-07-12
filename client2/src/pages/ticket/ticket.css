@@ -11,13 +11,15 @@
   justify-content: center;
   align-items: center;
 }
+
 .ticket_container h1 {
   text-align: center;
   padding: 10px;
   margin: 10px 0;
 }
 
-.ticket_card, .match_summary_card {
+.ticket_card,
+.match_summary_card {
   width: 60%;
   background-color: #fff;
   color: #333;
@@ -28,9 +30,11 @@
   display: flex;
   flex-direction: column;
 }
+
 .match_summary_card {
   padding: 25px 40px;
 }
+
 .match_summary_card h2 {
   color: rgba(0, 0, 0, 0.65);
   font-size: 24px;
@@ -40,9 +44,11 @@
   width: 100%;
   padding: 10px;
 }
+
 form .form-row {
   margin: 10px;
 }
+
 .form-row label {
   flex: 1;
   font-weight: 700;
@@ -68,18 +74,27 @@ form .form-row {
 
 /* Media queries (medium screen)*/
 @media screen and (max-width: 1024px) {
+
   .ticket_card,
   .match_summary_card {
     width: 80%;
   }
 }
+
 /* Media queries (small screen)*/
 @media screen and (max-width: 600px) {
+
   .ticket_card,
   .match_summary_card {
     width: 96%;
   }
+
   .ticket_btn {
     gap: 5px;
+  }
+
+  .ticket_btn button {
+    padding: 5px;
+    border-radius: 5px;
   }
 }

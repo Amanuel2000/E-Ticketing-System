@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   border: 0;
@@ -11,7 +13,7 @@
 :root {
   --primary-hue: 210;
   --gray-hue: 240;
-  
+
   --color-primary: hsl(var(--primary-hue), 100%, 50%);
   --color-primary-variant: hsl(var(--primary-hue), 100%, 65%);
   --color-secondary: #ffb1;
@@ -41,7 +43,12 @@ body {
   margin-inline: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.2;
   color: var(--color-gray-100);
 }
@@ -86,10 +93,12 @@ img {
   border-radius: 2rem;
   font-size: 1.1rem;
 }
+
 .btn.sm {
   padding: 0.4rem 1.2rem;
   font-size: 0.9rem;
 }
+
 .btn.sm:hover {
   background-color: var(--color-gray-100);
 }
@@ -122,11 +131,13 @@ section {
   border-radius: 3rem;
   transition: var(--transition);
 }
+
 .card:hover {
   background: transparent;
   border-color: var(--color-gray-400);
   cursor: default;
 }
+
 .card span {
   width: 3rem;
   height: 3rem;
@@ -141,11 +152,14 @@ section {
   border-radius: 1rem;
   transition: var(--transition);
 }
+
 .card:hover span {
   background-color: var(--color-secondary);
   color: var(--color-gray-600);
 }
-.card p, .card small {
+
+.card p,
+.card small {
   margin-top: 1rem;
   display: block;
   font-weight: 300;
@@ -157,6 +171,7 @@ section {
   overflow: hidden;
   border-bottom: 2px solid var(--color-gray-400);
 }
+
 .header_container {
   width: 100%;
   height: 100%;
@@ -165,10 +180,12 @@ section {
   place-items: center;
   background-color: rgba(90, 226, 215, 0.466);
 }
+
 .header_container-bg {
   position: absolute;
   width: 100%;
 }
+
 .header_content {
   position: relative;
   width: 44%;
@@ -176,6 +193,7 @@ section {
   text-align: center;
   color: var(--color-gray-100);
 }
+
 .header_content h2 {
   margin-bottom: 1rem;
 }
@@ -185,9 +203,11 @@ section {
   .container {
     width: var(--container-width-md);
   }
+
   h1 {
     font-size: 2rem;
   }
+
   h2 {
     font-size: 1.6rem;
   }
@@ -204,12 +224,18 @@ section {
     line-height: 1.3;
   }
 
+  .card {
+    border-radius: 1rem;
+  }
+
   section {
     margin-top: 5rem;
   }
+
   .header {
     height: fit-content;
   }
+
   .header_content {
     width: var(--container-width-md);
     padding: 3rem 0;

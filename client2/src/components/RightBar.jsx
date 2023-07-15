@@ -1,6 +1,7 @@
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import React from 'react'
+import { teams } from '../data';
 
 const RightBar = () => {
   return (
@@ -9,14 +10,13 @@ const RightBar = () => {
         <div className="rightBarWrapper">
           <div className="rightBar-card">
             <button style={{backgroundColor: "rgba(153, 38, 240, 0.45)", textAlign: "center"}}>All Ethiopian Premier League Teams</button>
-            <button>Fasil</button>
-            <button>Giorges</button>
-            <button>Ethiopian Bunna</button>
-            <button>Bahir Dar</button>
-            <button>Hawassa</button>
-            <button>Adama</button>
-            <button>Wolkite</button>
-            <button>Dire Dawa</button>
+            {
+              teams.map(({id, name}) => {
+                return (
+                  <button key={id}>{name}</button>
+                )
+              })
+            }
             <button className="sidebarButton">See More...</button>
           </div>
           <div className="event">
@@ -35,13 +35,6 @@ const RightBar = () => {
               <div className="desc">
                 <p>
                   Coming Soon
-                </p>
-              </div>
-            </div>
-            <div className="item">
-              <div className="desc">
-                <p>
-                  Hot News
                 </p>
               </div>
             </div>

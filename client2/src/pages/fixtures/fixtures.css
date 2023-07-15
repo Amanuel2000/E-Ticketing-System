@@ -1,5 +1,6 @@
 .fixtures {
   display: flex;
+  margin-bottom: 3rem;
 }
 
 /* Left side content */
@@ -154,37 +155,43 @@
 
 /* Media Queries (medium screen) */
 @media screen and (max-width: 1024px) {
-  .fixtures {
-    display: flex;
-    flex-direction: column;
-  }
-
   .leftBar {
     overflow-y: hidden;
     height: calc(50vh - 50px);
   }
 
   .rightBar {
-    height: calc(30vh - 50px);
-  }
-
-  .rightBar-card {
-    width: 100%;
+    display: none;
   }
 }
 
 /* Media Queries (small screen) */
 @media screen and (max-width: 600px) {
-  .fixture-content .fixture-card {
-    padding: 10px;
-    margin: 5px;
+  .fixtures {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .leftBar {
+    height: calc(40vh - 50px);
+  }
+
+  .fixture-content h1 {
+    padding: 5px;
+    margin: 5px 0;
   }
 
   .fixture-card .team {
     flex-direction: column;
   }
 
-  .fix-btn button {
+  .fixture-card .desc span {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .fixture-card button {
     width: 100%;
   }
 }

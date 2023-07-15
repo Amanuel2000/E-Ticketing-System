@@ -195,4 +195,67 @@ const fixtures = [
         team2: "Mekelle FC",
     }
 ]
-export { links, stories, faqs, testimonials, fixtures }
+
+const teams = [
+    {
+        id: 1,
+        name: "Adama City FC"
+    },
+    {
+        id: 2,
+        name: "Arba Minch City FC"
+    },
+    {
+        id: 3,
+        name: "Bahir Dar Kenema FC"
+    },
+    {
+        id: 4,
+        name: "Defence Force FC"
+    },
+    {
+        id: 5,
+        name: "Ethio Electric FC"
+    },
+    {
+        id: 6,
+        name: "Ethiopian Coffee FC"
+    },
+    {
+        id: 7,
+        name: "Fasil Kenema FC"
+    },
+    {
+        id: 8,
+        name: "Hadiya Hossana FC"
+    },
+    {
+        id: 9,
+        name: "Hawassa Kenema FC"
+    },
+    {
+        id: 10,
+        name: "Jimma Aba Jifar FC"
+    },
+    {
+        id: 11,
+        name: "Mekelle 70 Enderta FC"
+    },
+    {
+        id: 12,
+        name: "Saint George FC"
+    },
+    {
+        id: 13,
+        name: "Sidama Coffee FC"
+    },
+    {
+        id: 14,
+        name: "Wolaitta Dicha FC"
+    },
+    {
+        id: 15,
+        name: "Wolkite City FC"
+    },
+]
+export { links, stories, faqs, testimonials, fixtures, teams }

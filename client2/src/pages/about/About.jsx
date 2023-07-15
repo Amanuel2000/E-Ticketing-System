@@ -5,7 +5,7 @@ import EliasImage from '../../images/Elias.jpeg'
 
 const About = () => {
   return (
-    <div>
+    <div className='about'>
       <Header title="About Us">
       </Header>
 

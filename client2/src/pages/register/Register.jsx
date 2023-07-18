@@ -38,49 +38,42 @@ const Register = () => {
         <div className="register-card">
           <h1>Register</h1>
           <form>
-            <label>
-              Username:
-            </label>
             <div>
               <Person style={{ color: "#21465b" }}/>
               <input
                 type="text"
                 name="username"
+                placeholder="Username"
                 onChange={handleChange}
               />
             </div>
 
-            <label>
-              Email:
-            </label>
             <div>
               <Mail style={{ color: "#21465b" }}/>
               <input
                 type="email"
                 name="email"
+                placeholder="Email"
                 onChange={handleChange}
               />
             </div>
 
-            <label>
-              Password:
-            </label>
             <div>
               <Lock style={{ color: "#21465b" }}/>
               <input
                 type="password"
                 name="password"
+                placeholder="Password"
                 onChange={handleChange}
               />
             </div>
-            <label>
-              Confirm Password:
-            </label>
+
             <div>
               <Lock style={{ color: "#21465b" }}/>
               <input
                 type="password"
                 name="confirm_password"
+                placeholder="Confirm Password"
                 onChange={handleChange}
               />
             </div>

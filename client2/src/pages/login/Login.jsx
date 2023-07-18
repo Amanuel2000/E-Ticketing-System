@@ -5,9 +5,6 @@ import './login.css'
 import {Person, Lock } from '@material-ui/icons'
 
 const Login = () => {
-  const [user, setUser] = useState('');
-  const [pwd, setPwd] = useState('');
-
   const [inputs, setInputs] = useState({
     username: "",
     password: "",
@@ -21,11 +18,12 @@ const Login = () => {
   };
   const { login } = useContext(AuthContext);
 
+
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       await login(inputs);
-      navigate("/")
+      navigate("/fixtures")
     } catch (err) {
       setErr(err.response.data);
     }
@@ -41,20 +39,22 @@ const Login = () => {
               <Person style={{ color: "#21465b" }}/>
               <input
                 type="text"
-                placeholder="Username" name="username"  onChange={handleChange}
-                value={user}
-                required />
+                placeholder="Username"
+                name="username"
+                onChange={handleChange}
+              />
             </div>
             <div>
               <Lock style={{ color: "#21465b" }}/>
               <input
                 type="password"
-                placeholder="Password" name="password"  onChange={handleChange}
-                value={pwd}
-                required />
+                placeholder="Password"
+                name="password"
+                onChange={handleChange}
+              />
             </div>
             {err && err}
-            <button disabled={!user || !pwd ? true : false} onClick={handleLogin}>Login</button>
+            <button onClick={handleLogin}>Login</button>
           </form>
 
           <p>

@@ -26,7 +26,6 @@ const App = () => {
     return children
   }
   return (
-   
     <BrowserRouter>
       <ScrollToTop />
       <Navbar />
@@ -37,9 +36,9 @@ const App = () => {
         <Route path="contact" element={<Contact />} />
         <Route path="login" element={<Login />} />
         <Route path="Register" element={<Register />} />
-        <Route path="/fixtures/ticket" element={<Ticket />} />
-        <Route path="/fixtures/ticket/payment" element={<Payment />} />
-        <Route path="/fixtures/ticket/payment/generate" element={<GenerateQRC />} />
+        <Route path="ticket" element={<Ticket />} />
+        <Route path="payment" element={<Payment />} />
+        <Route path="generate" element={<GenerateQRC />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

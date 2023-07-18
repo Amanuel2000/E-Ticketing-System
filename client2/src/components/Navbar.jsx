@@ -3,11 +3,14 @@ import './navbar.css'
 import Logo from '../images/logo.png'
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
-import { useState } from 'react';
+import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
+import { useState, useContext } from 'react';
+import { AuthContext } from "../context/authContext";
 
 
 const Navbar = () => {
   const [isNavShowing, setIsNavShowing] = useState(false);
+  const { currentUser } = useContext(AuthContext);
 
   return (
     <nav>
@@ -28,12 +31,14 @@ const Navbar = () => {
           <li>
             <NavLink to="/contact" className={({isActive}) => isActive ? 'active-nav' : ''} onClick={() => setIsNavShowing (prev => !prev)}>Contact</NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/login" className={({isActive}) => isActive ? 'active-nav' : ''} onClick={() => setIsNavShowing (prev => !prev)}>Login</NavLink>
           </li>
           <li>
             <NavLink to="/register" className={({isActive}) => isActive ? 'active-nav' : ''} onClick={() => setIsNavShowing (prev => !prev)}>Register</NavLink>
-          </li>
+          </li> */}
+          <PersonOutlinedIcon />
+          <span>{currentUser.name}</span>
         </ul>
         <button className='nav_toggle-btn' onClick={() => setIsNavShowing (prev => !prev)}>
           {

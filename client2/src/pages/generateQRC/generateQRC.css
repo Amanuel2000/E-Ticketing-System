@@ -72,8 +72,9 @@
 }
 
 .gen-btn {
-  width: 100%;
+  width: 50%;
   padding: 10px;
+  margin: 10px;
   border-radius: 10px;
   border: none;
   background-color: #55c2da;
@@ -82,7 +83,6 @@
   transition: transform 0.5s;
 }
 .gen-btn:hover {
-  transform: scale(1.1);
   font-weight: bold;
 }
 .gen-container .card-qrc {

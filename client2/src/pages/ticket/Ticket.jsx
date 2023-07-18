@@ -14,7 +14,8 @@ const Ticket = () => {
     "1",
     "2",
     "3",
-    "4"
+    "4",
+    "5"
   ];
 
   return (
@@ -22,12 +23,6 @@ const Ticket = () => {
       <div className="ticket">
         <div className="ticket_container">
           <h1>Get your ticket</h1>
-          <div className="match_summary_card">
-            <h2>Selected Match Summary</h2>
-            <span>Match:</span>
-            <span>Date:</span>
-            <span>Time:</span>
-          </div>
           <div className="ticket_card">
             <form className="form-row">
               <div>
@@ -52,13 +47,13 @@ const Ticket = () => {
                 </select>
               </div>
               <label htmlFor="">Total Price</label>
-              <p>400ETB</p>
+              <p></p>
             </form>
             <div className="ticket_btn">
               <Link to="/fixtures">
                 <button className="btn"><AiOutlineArrowLeft /> Go Back To Fixtures</button>
               </Link>
-              <Link to="/fixtures/ticket/payment">
+              <Link to="/payment">
                 <button className="btn">Go To Payment <AiOutlineArrowRight /></button>
               </Link>
             </div>

@@ -17,7 +17,7 @@
   margin: 10px 0;
 }
 
-.ticket_card, .match_summary_card {
+.ticket_card {
   width: 60%;
   background-color: #fff;
   color: #333;
@@ -27,13 +27,6 @@
   margin: 10px;
   display: flex;
   flex-direction: column;
-}
-.match_summary_card {
-  padding: 25px 40px;
-}
-.match_summary_card h2 {
-  color: rgba(0, 0, 0, 0.65);
-  font-size: 24px;
 }
 
 .ticket_card form {

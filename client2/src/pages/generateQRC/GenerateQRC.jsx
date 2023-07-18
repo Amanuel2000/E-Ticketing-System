@@ -1,7 +1,43 @@
 import "./generateQRC.css"
-import { Link } from "react-router-dom";
+import QRCode from 'qrcode'
+import { useState } from 'react'
 
 const GenerateQRC = () => {
+
+  function generateRandomString(length) {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    let randomString = '';
+
+    for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * characters.length);
+      randomString += characters.charAt(randomIndex);
+    }
+
+    return randomString;
+  }
+
+  // Usage example
+  const randomString = generateRandomString(10);
+  // console.log(randomString);
+
+
+  const [url, setUrl] = useState('')
+	const [qr, setQr] = useState('')
+
+	const GenerateQRCode = () => {
+		QRCode.toDataURL(url, {
+			width: 800,
+			margin: 2,
+			color: {
+				dark: '#335383FF',
+				light: '#EEEEEEFF'
+			}
+		}, (err, url) => {
+			if (err) return console.error(err)
+			setQr(url)
+		})
+	}
+
   return (
     <div>
       <div className="generateQRC">
@@ -14,35 +50,34 @@ const GenerateQRC = () => {
           </div>
           <div className="order-number">
             <form className="form-row">
-              <label htmlFor="">Enter Your Order Number here</label>
-              <input type="text" />
+              <label htmlFor="">Your Confirmation Number is: </label>
+              <input type="text" value={"CONF2023" + randomString} />
             </form>
           </div>
 
-          <Link to="/generateQRC">
-            <button className="gen-btn">Generate QRCode</button>
-          </Link>
-
           <div className="card-qrc">
             <div className="details">
-              <p>Summary</p>
-              <span>Math: </span>
-              <span>Date: </span>
-              <span>Time: </span>
-              <span>Type: </span>
-              <span>Total Price: </span>
+              <h3>Your Ticket Details</h3>
+              <br />
+              <span>Match: <big>Hawassa vs Adama </big></span>
+              <span>Date: <big>25 Aug 2023</big></span>
+              <span>Time: <big> 12:00 PM </big></span>
+              <span>Type: <big>Premiear League</big></span>
+              <span>Total Price: <big>ETB 500 </big> </span>
+              <span>Ticket Number: <big>{"QRC2023" + randomString}  </big> </span>
             </div>
             <div className="qrc">
-              QRCode
+              <input
+                type="text"
+                placeholder="Paste your ticket number here to get your QR Code "
+                value={url}
+                onChange={e => setUrl(e.target.value)} />
+              <button onClick={GenerateQRCode}  className="gen-btn">Get my QRCode</button>
+              {qr && <>
+                <img src={qr} />
+                <a href={qr} download="qrcode.png">Download</a>
+              </>}
             </div>
-          </div>
-          <div className="download">
-            <Link to="/download">
-              <button className="gen-btn">Download</button>
-            </Link>
-            <Link to="/download">
-              <button className="gen-btn">Print</button>
-            </Link>
           </div>
         </div>
       </div>

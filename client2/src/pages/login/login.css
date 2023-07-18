@@ -1,8 +1,8 @@
 .login {
-  height: 100vh;
+  height: calc(100vh - 60px);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   background-color: white;
 }
 
@@ -11,7 +11,6 @@
   flex-direction: column;
   background-color: white;
   border-radius: 10px;
-  min-height: 600px;
   overflow: hidden;
   padding: 20px;
   height: 400px;
@@ -28,16 +27,13 @@ form {
   display: flex;
   flex-direction: column;
   color: #010101;
-}
-
-label {
-  margin-top: 1rem;
+  margin: 20px 0;
 }
 
 form div {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin: 2rem 0;
 }
 
 input[type="email"],
@@ -46,6 +42,7 @@ input[type="password"] {
   padding: 0.25rem;
   width: 100%;
   border-bottom: 1px solid lightgray;
+
 }
 
 form button {
@@ -60,17 +57,6 @@ form button {
   margin: 1rem 0 0.5rem 0;
 }
 
-
-.errmsg {
-  background-color: lightpink;
-  color: firebrick;
-  font-weight: bold;
-  padding: 0.5rem;
-  position: absolute;
-  margin-top: -37rem;
-  width: 30%;
-  left: 10px;
-}
 
 p span:hover {
   text-decoration: underline;

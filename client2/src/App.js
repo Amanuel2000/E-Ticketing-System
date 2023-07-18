@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter,   Navigate, Route, Routes } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Home from "./pages/home/Home"
 import Fixtures from "./pages/fixtures/Fixtures"
@@ -12,9 +12,21 @@ import GenerateQRC from "./pages/generateQRC/GenerateQRC"
 import Ticket from "./pages/ticket/Ticket"
 import Payment from "./pages/payment/Payment"
 import ScrollToTop from "./components/ScrollToTop"
+import { useContext } from "react"
+import { AuthContext } from "./context/authContext"
+ 
 
 const App = () => {
+   
+  const { currentUser } = useContext(AuthContext)
+  const ProtectedRoute = ({ children }) => {
+    if (!currentUser) {
+      return <Navigate to="/login"/>
+    }
+    return children
+  }
   return (
+   
     <BrowserRouter>
       <ScrollToTop />
       <Navbar />

@@ -1,17 +1,36 @@
-import "./payment.css"
-import Select from "react-select";
+import "./payment.css";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { useState } from "react";
 
 const Payment = () => {
-  const options = [
-    {value: "telebirr", label: "telebirr"},
-    {value: "CBEbirr", label: "CBEbirr"},
-    {value: "HelloCash", label: "HelloCash"},
-    {value: "Amole", label: "Amole"},
+
+  // Payment methods dropdown
+  const payOptions = [
+    "telebirr",
+    "CBEbirr",
+    "HelloCash",
+    "Amole"
   ];
 
+  // Order number
+  function generateRandomString(length) {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    let randomString = '';
+
+    for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * characters.length);
+      randomString += characters.charAt(randomIndex);
+    }
+
+    return randomString;
+  }
+
+  // Usage example
+  const randomString = generateRandomString(10);
+  // console.log(randomString);
+
+  // copy order numbers
   const [text, setText] = useState('');
 
   const inputHandler = event => {
@@ -22,6 +41,7 @@ const Payment = () => {
     await navigator.clipboard.writeText(text);
     alert('copied');
   }
+
   return (
     <div>
       <div className="payment">
@@ -42,17 +62,20 @@ const Payment = () => {
           </div>
 
           <div className="pay_card">
-            <form method="POST">
-              <div className="form-row">
+            <form className="form-row">
+              <label htmlFor="">Order Number</label>
+              <input type="text" value={randomString} onChange={inputHandler} />
+              <button className="copy-btn" onClick={copy} disabled={!text}>Copy the order number</button>
+
+              <div>
                 <label htmlFor="">Select Payment Method</label>
-                <Select options={options} />
-              </div>
-              <div className="form-row">
-                <label htmlFor="">Order Number</label>
-                <div className="ord-num-cpy">
-                  <input type="text" value={text} onChange={inputHandler} />
-                  <button onClick={copy} disabled={!text}>Copy</button>
-                </div>
+                <select name="" id="">
+                    {
+                      payOptions.map(pay => {
+                        return <option>{pay}</option>
+                      })
+                    }
+                  </select>
               </div>
             </form>
             <div className="pay_btn">

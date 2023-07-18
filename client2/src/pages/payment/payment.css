@@ -31,14 +31,10 @@
   color: #333;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  padding: 25px 40px;
   margin: 10px;
   display: flex;
   flex-direction: column;
-}
-
-.ticket_summary_card {
-  padding: 25px 40px;
 }
 
 .ticket_summary_card h2 {
@@ -46,45 +42,26 @@
   font-size: 24px;
 }
 
-.pay_card form {
-  width: 100%;
-  padding: 10px;
-}
-
 .form-row {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+  width: 100%;
 }
 
 .form-row label {
-  margin-top: 10px;
+  font-weight: 700;
 }
 
-.form-row .ord-num-cpy {
-  display: flex;
-  gap: 2px;
-}
-
-.ord-num-cpy input {
-  border: none;
+.form-row input {
+  width: 97%;
   border: 1px solid lightgray;
-  flex: 5;
-  margin: 5px 0;
 }
 
-.ord-num-cpy button {
-  flex: 1;
-  color: #fff;
-  background: #333;
-  cursor: pointer;
-  font-size: 1rem;
+.form-row .copy-btn {
+  width: 25%;
+  border-radius: 10px;
 }
-
-.ord-num-cpy button:hover {
-  font-size: 1.2rem;
+.form-row .copy-btn:hover {
+  color: black;
 }
-
 .pay_btn {
   display: flex;
   justify-content: center;

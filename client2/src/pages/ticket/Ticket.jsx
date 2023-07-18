@@ -1,21 +1,20 @@
 import "./ticket.css"
-import Select from "react-select";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 
 const Ticket = () => {
-  const payOptions = [
-    {value: "VIP 200ETB", label: "VIP 200ETB"},
-    {value: "Standard 100ETB", label: "Standard 100ETB"},
-    {value: "Semi 50ETB", label: "Semi 50ETB"},
-    {value: "Ordinary 20ETB", label: "Ordinary 20ETB"},
+  const ticketOptions = [
+    "VIP 200ETB",
+    "Standard 100ETB",
+    "Semi 50ETB",
+    "Ordinary 20ETB"
   ];
 
   const numOptions = [
-    {value: "1", label: "1"},
-    {value: "2", label: "2"},
-    {value: "3", label: "3"},
-    {value: "4", label: "4"},
+    "1",
+    "2",
+    "3",
+    "4"
   ];
 
   return (
@@ -30,19 +29,30 @@ const Ticket = () => {
             <span>Time:</span>
           </div>
           <div className="ticket_card">
-            <form method="POST">
-              <div className="form-row">
+            <form className="form-row">
+              <div>
                 <label>Select Ticket Type and Price</label>
-                <Select options={payOptions} />
+                <select name="" id="">
+                  {
+                    ticketOptions.map(ticket => {
+                      return <option>{ticket}</option>
+                    })
+                  }
+                </select>
               </div>
-              <div className="form-row">
+              
+              <div>
                 <label htmlFor="">Number of Applicants</label>
-                <Select options={numOptions} />
+                <select>
+                  {
+                    numOptions.map(num => {
+                      return <option>{num}</option>
+                    })
+                  }
+                </select>
               </div>
-              <div className="form-row">
-                <label htmlFor="">Total Price</label>
-                <p>400ETB</p>
-              </div>
+              <label htmlFor="">Total Price</label>
+              <p>400ETB</p>
             </form>
             <div className="ticket_btn">
               <Link to="/fixtures">

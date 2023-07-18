@@ -8,7 +8,7 @@ const MainHeader = () => {
         <div className="main_header-left">
             <h1>Welcome to <span>E-ticket</span></h1>
             <p>Get all Ethiopian Premier League Football matches tickets here...</p>
-          <Link to='/register' className='btn lg'>Get Started</Link>
+          <Link to='/login' className='btn lg'>Get Started</Link>
         </div>
         <div className="main_header-right">
           <div className="main_header-image">

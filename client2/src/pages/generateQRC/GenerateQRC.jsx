@@ -13,12 +13,9 @@ const GenerateQRC = () => {
             <p>Do not share the QR Code with others. After you download it and save it in a safe place. <b>Remember</b>, this is your ticket to watch the game in the stadium.</p>
           </div>
           <div className="order-number">
-            <form method="POST">
-              <div className="form-row">
-                <label htmlFor="">Enter Your Order Number</label>
-                <input type="text" />
-                <input type="submit" value="Submit" />
-              </div>
+            <form className="form-row">
+              <label htmlFor="">Enter Your Order Number here</label>
+              <input type="text" />
             </form>
           </div>
 

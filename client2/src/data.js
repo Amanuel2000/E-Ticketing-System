@@ -117,6 +117,13 @@ const testimonials = [
         quote: "Maxime minima cumque sit amet consectetur adipisicing elit. Praesentium ipsam facere ea a laboriosam sed? Quod vel voluptates a! Maxime minima cumque aut? In expedita numquam consectetur non officia iusto.",
         job: "Pharmacist",
         avatar: require("./images/avatar5.jpg")
+    },
+    {
+        id: 6,
+        name: "Nana Yaa Dankwa",
+        quote: "Maxime minima cumque sit amet consectetur adipisicing elit. Praesentium ipsam facere ea a laboriosam sed? Quod vel voluptates a! Maxime minima cumque aut? In expedita numquam consectetur non officia iusto.",
+        job: "Pharmacist",
+        avatar: require("./images/avatar6.jpg")
     }
 ]
 

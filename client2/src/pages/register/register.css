@@ -41,6 +41,13 @@ form button {
   cursor: pointer;
 }
 
+form button:hover {
+  font-weight: 700;
+}
+
+.register p {
+  text-align: center;
+}
 p span:hover {
   text-decoration: underline;
 }

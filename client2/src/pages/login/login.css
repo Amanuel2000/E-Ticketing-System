@@ -41,6 +41,14 @@ form button {
   cursor: pointer;
 }
 
+form button:hover {
+  font-weight: 700;
+}
+
+.login p {
+  text-align: center;
+}
+
 p span:hover {
   text-decoration: underline;
 }

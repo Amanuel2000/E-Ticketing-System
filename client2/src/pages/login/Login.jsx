@@ -23,15 +23,15 @@ const Login = () => {
     e.preventDefault();
     try {
       await login(inputs);
-      navigate("/fixtures")
+      navigate("/")
     } catch (err) {
       setErr(err.response.data);
     }
   };
 
   return (
-    <div>
-      <div className="login">
+    <div className="login">
+      <div className="login-card">
         <h1>Login</h1>
         <form>
           <div className="input-group">

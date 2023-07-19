@@ -52,8 +52,8 @@ const Register = () => {
   };
 
   return (
-    <div>
-      <div className="register">
+    <div className="register">
+      <div className="register-card">
         <h1>Register</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="input-group">

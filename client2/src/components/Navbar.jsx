@@ -4,33 +4,13 @@ import Logo from '../images/logo.png'
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import { useState } from 'react';
-import { useContext } from "react";
+import { useState, useContext } from 'react';
 import { AuthContext } from "../context/authContext";
-import { useHistory } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
- 
+
 
 const Navbar = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
- const navigate = useNavigate();
-
-
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-  };
-
-  const handleLogout = () => {
-    // Clear user data (e.g., localStorage.clear())
-    // Update authentication state (e.g., setIsLoggedIn(false))
-    // Redirect to login page (e.g., history.push('/login'))
-
-    setIsLoggedIn(false);
-    localStorage.clear();
-    navigate('/login');
-  };
   const [isNavShowing, setIsNavShowing] = useState(false);
-const { currentUser } = useContext(AuthContext);
+  const { currentUser } = useContext(AuthContext);
 
   return (
     <nav>
@@ -51,28 +31,14 @@ const { currentUser } = useContext(AuthContext);
           <li>
             <NavLink to="/contact" className={({isActive}) => isActive ? 'active-nav' : ''} onClick={() => setIsNavShowing (prev => !prev)}>Contact</NavLink>
           </li>
-          {isLoggedIn ? (
-            <li>
-               
-             <NavLink to="/" className={({isActive}) => isActive ? 'active-nav' : ''} onClick={() => setIsNavShowing (prev => !prev)}> <button onClick={handleLogout}> Logout</button></NavLink>
-            </li>) : (
-            <li>
-               
-            <NavLink to="/login" className={({isActive}) => isActive ? 'active-nav' : ''}> <button onClick={handleLogin}> Login</button></NavLink>
-              </li>
-          )}
-           {/* {isLoggedIn ? (
-          <li>
-            <button onClick={handleLogout}>Logout</button>
+          {/* <li>
+            <NavLink to="/login" className={({isActive}) => isActive ? 'active-nav' : ''} onClick={() => setIsNavShowing (prev => !prev)}>Login</NavLink>
           </li>
-        ) : (
           <li>
-            <button onClick={handleLogin}>Login</button>
-          </li>
-        )} */}
-        
-          
-          
+            <NavLink to="/register" className={({isActive}) => isActive ? 'active-nav' : ''} onClick={() => setIsNavShowing (prev => !prev)}>Register</NavLink>
+          </li> */}
+          <PersonOutlinedIcon />
+          <span>{currentUser.name}</span>
         </ul>
         <button className='nav_toggle-btn' onClick={() => setIsNavShowing (prev => !prev)}>
           {

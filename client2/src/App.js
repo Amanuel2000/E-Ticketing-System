@@ -1,4 +1,9 @@
-import { BrowserRouter,   Navigate, Route, Routes } from "react-router-dom"
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+  Navigate
+} from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Home from "./pages/home/Home"
 import Fixtures from "./pages/fixtures/Fixtures"
@@ -16,32 +21,88 @@ import { useContext } from "react"
 import { AuthContext } from "./context/authContext"
 
 const App = () => {
-  const { currentUser } = useContext(AuthContext)
-  const ProtectedRoute = ({ children }) => {
-    if (!currentUser) {
-      return <Navigate to="/login"/>
-    }
-    return children
-  }
-  return (
-    <BrowserRouter>
+
+  const {currentUser} = useContext(AuthContext);
+
+  const Layout = () => {
+    return (
+      <>
       <ScrollToTop />
       <Navbar />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="fixtures" element={<Fixtures />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="login" element={<Login />} />
-        <Route path="Register" element={<Register />} />
-        <Route path="ticket" element={<Ticket />} />
-        <Route path="payment" element={<Payment />} />
-        <Route path="generate" element={<GenerateQRC />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <div>
+        <Outlet />
+      </div>
       <Footer />
-    </BrowserRouter>
-  )
+      </>
+    );
+  };
+
+  const ProtectedRoute = ({ children }) => {
+    if (!currentUser) {
+      return <Navigate to="/login" />;
+    }
+
+    return children;
+  };
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        <ProtectedRoute>
+          <Layout />
+        </ProtectedRoute>
+      ),
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/fixtures",
+          element: <Fixtures />,
+        },
+        {
+          path: "/ticket",
+          element: <Ticket />,
+        },
+        {
+          path: "/payment",
+          element: <Payment />,
+        },
+        {
+          path: "/generate",
+          element: <GenerateQRC />,
+        },
+        {
+          path: "/about",
+          element: <About />,
+        },
+        {
+          path: "/contact",
+          element: <Contact />,
+        },
+        {
+          path: "*",
+          element: <NotFound />,
+        }
+      ],
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/register",
+      element: <Register />,
+    },
+  ]);
+
+  return (
+    <div>
+      <RouterProvider router={router} />
+    </div>
+  );
 }
 
-export default App
+export default App;

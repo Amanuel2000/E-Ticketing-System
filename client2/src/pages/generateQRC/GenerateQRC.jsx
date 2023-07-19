@@ -73,7 +73,7 @@ const GenerateQRC = () => {
                 value={url}
                 onChange={e => setUrl(e.target.value)} />
               <button onClick={GenerateQRCode}  className="gen-btn">Get my QRCode</button>
-              <div>
+              <div className="gen-qrc">
                 {qr && <>
                   <img src={qr} />
                   <a href={qr} download="qrcode.png">Download</a>

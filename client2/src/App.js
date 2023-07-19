@@ -14,10 +14,8 @@ import Payment from "./pages/payment/Payment"
 import ScrollToTop from "./components/ScrollToTop"
 import { useContext } from "react"
 import { AuthContext } from "./context/authContext"
- 
 
 const App = () => {
-   
   const { currentUser } = useContext(AuthContext)
   const ProtectedRoute = ({ children }) => {
     if (!currentUser) {

@@ -32,37 +32,35 @@ const Login = () => {
   return (
     <div>
       <div className="login">
-        <div className="login-card">
-          <h1>Login</h1>
-          <form>
-            <div>
-              <Person style={{ color: "#21465b" }}/>
-              <input
-                type="text"
-                placeholder="Username"
-                name="username"
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <Lock style={{ color: "#21465b" }}/>
-              <input
-                type="password"
-                placeholder="Password"
-                name="password"
-                onChange={handleChange}
-              />
-            </div>
-            {err && err}
-            <button onClick={handleLogin}>Login</button>
-          </form>
+        <h1>Login</h1>
+        <form>
+          <div className="input-group">
+            <Person style={{ color: "#21465b" }}/>
+            <input
+              type="text"
+              placeholder="Username"
+              name="username"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input-group">
+            <Lock style={{ color: "#21465b" }}/>
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              onChange={handleChange}
+            />
+          </div>
+          {err && err}
+          <button onClick={handleLogin}>Login</button>
+        </form>
 
-          <p>
-            Don't you have an account?
-            <Link to="/register" style={{cursor: "pointer", fontSize:"1.2rem", fontWeight:"600", color:"blue"}}> <span>Register</span>
-            </Link>
-          </p>
-        </div>
+        <p>
+          Don't you have an account?
+          <Link to="/register" style={{cursor: "pointer", fontSize:"1.2rem", fontWeight:"600", color:"blue"}}> <span>Register</span>
+          </Link>
+        </p>
       </div>
     </div>
   )

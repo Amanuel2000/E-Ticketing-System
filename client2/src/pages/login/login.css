@@ -1,62 +1,45 @@
 .login {
-  height: calc(100vh - 60px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-}
-
-.login-card {
-  display: flex;
-  flex-direction: column;
+  max-width: 30rem;
+  margin: 2rem auto;
+  padding: 2rem;
   background-color: white;
   border-radius: 10px;
-  overflow: hidden;
-  padding: 20px;
-  height: 400px;
-  width: 400px;
   box-shadow: -5px -5px 15px rgb(255, 255, 255, 0.1), 5px 5px 15px rgb(0, 0, 0, 0.35);
 }
 
-.login-card h1 {
+.login h1 {
   color: #555;
-  font-size: 40px;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  color: #010101;
-  margin: 20px 0;
+  gap: 1rem;
 }
 
-form div {
+.input-group {
   display: flex;
-  align-items: center;
-  margin: 2rem 0;
+  gap: 0.5rem;
 }
 
-input[type="email"],
-input[type="password"] {
-  font-size: 1.2rem;
-  padding: 0.25rem;
-  width: 100%;
-  border-bottom: 1px solid lightgray;
-
+.input-group input {
+  padding: 0.5em;
+  border-bottom: 1px solid gray;
+  font-size: 1rem;
 }
 
 form button {
   width: 100%;
-  padding: 10px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
   border-radius: 20px;
   border: none;
   background-color: #55c2da;
-  font-weight: bold;
-  font-size: 16px;
+  font-size: 1.2rem;
   cursor: pointer;
-  margin: 1rem 0 0.5rem 0;
 }
-
 
 p span:hover {
   text-decoration: underline;
@@ -64,15 +47,15 @@ p span:hover {
 
 /*Media Queries (medium screen)*/
 @media screen and (max-width: 1024px) {
-  .login-card {
+  .login {
     margin: 2rem 0;
-    width: 50%;
+    width: 60%;
   }
 }
 
 /*Media Queries (small screen)*/
 @media screen and (max-width: 600px) {
-  .login-card {
+  .login {
     margin: 2rem 0;
     width: 90%;
   }

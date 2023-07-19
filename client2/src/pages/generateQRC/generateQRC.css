@@ -1,7 +1,3 @@
-/* .generateQRC {
-  background: -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
-  height: 100vh;
-} */
 .gen-container {
   box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
   border-radius: 20px;
@@ -12,17 +8,16 @@
   align-items: center;
   gap: 10px;
 }
-.title h1 {
+.gen-container h1 {
   text-align: center;
   padding: 10px;
   margin: 10px 0;
 }
 
-.gen-container .card-warn,
-.gen-container .order-number,
-.gen-container .card-qrc {
+.card-warn,
+.order-number,
+.card-qrc {
   width: 70%;
-  height: 100%;
   background-color: #fff;
   color: #333;
   border-radius: 10px;
@@ -35,27 +30,6 @@
 }
 .card-warn h2 {
   color: red;
-}
-.gen-container .card-qrc {
-  width: 70%;
-}
-
-.gen-card {
-  height: 300px;
-  border: 1px solid rgba(0, 0, 0, 0.7);
-  margin: 0 auto;
-  background-color: #fff;
-  color: #333;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-}
-.gen-card form {
-  width: 100%;
-  padding: 10px;
 }
 
 .form-row {
@@ -71,6 +45,33 @@
   border: 1px solid lightgray;
 }
 
+.card-qrc {
+  flex-direction: row;
+}
+.card-qrc .details {
+  flex: 2;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background: #55c2da;
+}
+
+.card-qrc .qrc {
+  flex: 3.5;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  height: 600px;
+}
+
+.qrc input {
+  width: 100%;
+  text-align: center;
+}
 .gen-btn {
   width: 50%;
   padding: 10px;
@@ -85,37 +86,12 @@
 .gen-btn:hover {
   font-weight: bold;
 }
-.gen-container .card-qrc {
-  flex-direction: row;
-  height: 400px;
-}
-.card-qrc .details {
-  flex: 2;
-  width: 100%;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  background: #55c2da;
-}
-
-.card-qrc .qrc {
-  flex: 3.5;
-  width: 100%;
-  text-align: center;
-  margin: auto;
-}
-
-.download {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
 
 /* Media queries (small screen)*/
 @media screen and (max-width: 1024px) {
-  .gen-container .card-warn,
-  .gen-container .order-number,
-  .gen-container .card-qrc {
+  .card-warn,
+  .order-number,
+  .card-qrc {
     width: 100%;
   }
 }

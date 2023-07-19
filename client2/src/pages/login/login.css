@@ -13,7 +13,7 @@
   margin-bottom: 1.5rem;
 }
 
-form {
+.login form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -30,7 +30,7 @@ form {
   font-size: 1rem;
 }
 
-form button {
+.login form button {
   width: 100%;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
@@ -41,7 +41,7 @@ form button {
   cursor: pointer;
 }
 
-form button:hover {
+.login form button:hover {
   font-weight: 700;
 }
 
@@ -49,7 +49,7 @@ form button:hover {
   text-align: center;
 }
 
-p span:hover {
+.login p span:hover {
   text-decoration: underline;
 }
 

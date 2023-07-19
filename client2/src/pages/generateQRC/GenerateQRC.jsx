@@ -26,7 +26,7 @@ const GenerateQRC = () => {
 
 	const GenerateQRCode = () => {
 		QRCode.toDataURL(url, {
-			width: 800,
+			width: 10,
 			margin: 2,
 			color: {
 				dark: '#335383FF',
@@ -42,7 +42,7 @@ const GenerateQRC = () => {
     <div>
       <div className="generateQRC">
         <div className="gen-container">
-          <h1 className="title">Your QR Code</h1>
+          <h1>Your QR Code</h1>
 
           <div className="card-warn">
             <h2>Warning!</h2>
@@ -73,10 +73,12 @@ const GenerateQRC = () => {
                 value={url}
                 onChange={e => setUrl(e.target.value)} />
               <button onClick={GenerateQRCode}  className="gen-btn">Get my QRCode</button>
-              {qr && <>
-                <img src={qr} />
-                <a href={qr} download="qrcode.png">Download</a>
-              </>}
+              <div>
+                {qr && <>
+                  <img src={qr} />
+                  <a href={qr} download="qrcode.png">Download</a>
+                </>}
+              </div>
             </div>
           </div>
         </div>

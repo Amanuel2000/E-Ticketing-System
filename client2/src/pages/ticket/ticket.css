@@ -39,6 +39,9 @@
   font-weight: 700;
 }
 .form-row div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0;
 }
 .form-row input {

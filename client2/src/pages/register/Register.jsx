@@ -26,6 +26,7 @@ const Register = () => {
   }
   console.log(errors);
 
+
   const [inputs, setInputs] = useState({
     username: "",
     email: "",
@@ -63,7 +64,6 @@ const Register = () => {
               placeholder="Username"
               autoComplete="off"
               onChange={handleChange}
-              // {required: "Username is required"}
               />
           </div>
           <p style={{color:"red", fontSize:"0.9rem", marginTop:"0"}}>{errors.username?.message}</p>
@@ -102,7 +102,6 @@ const Register = () => {
           <p style={{color:"red"}}>{errors.confirm_password?.message}</p>
 
           {err && err }
-          {/* <button>Sign in</button> */}
           <button onClick={handleClick}>Register</button>
         </form>
 

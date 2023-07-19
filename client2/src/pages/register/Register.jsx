@@ -66,7 +66,7 @@ const Register = () => {
               onChange={handleChange}
               />
           </div>
-          <p style={{color:"red", fontSize:"0.9rem", marginTop:"0"}}>{errors.username?.message}</p>
+          <p className="error-message">{errors.username?.message}</p>
 
           <div className="input-group">
             <Mail style={{ color: "#21465b" }}/>
@@ -77,7 +77,7 @@ const Register = () => {
               onChange={handleChange}
             />
           </div>
-          <p style={{color:"red"}}>{errors.email?.message}</p>
+          <p className="error-message">{errors.email?.message}</p>
 
           <div className="input-group">
             <Lock style={{ color: "#21465b" }}/>
@@ -88,7 +88,7 @@ const Register = () => {
               onChange={handleChange}
             />
           </div>
-          <p style={{color:"red"}}>{errors.password?.message}</p>
+          <p className="error-message">{errors.password?.message}</p>
 
           <div className="input-group">
             <Lock style={{ color: "#21465b" }}/>
@@ -99,10 +99,11 @@ const Register = () => {
               onChange={handleChange}
             />
           </div>
-          <p style={{color:"red"}}>{errors.confirm_password?.message}</p>
+          <p className="error-message">{errors.confirm_password?.message}</p>
 
           {err && err }
-          <button onClick={handleClick}>Register</button>
+          <button>Register</button>
+          {/* <button onClick={handleClick}>Register</button> */}
         </form>
 
         <p>

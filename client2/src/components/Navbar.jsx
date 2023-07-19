@@ -31,14 +31,9 @@ const Navbar = () => {
           <li>
             <NavLink to="/contact" className={({isActive}) => isActive ? 'active-nav' : ''} onClick={() => setIsNavShowing (prev => !prev)}>Contact</NavLink>
           </li>
-          {/* <li>
-            <NavLink to="/login" className={({isActive}) => isActive ? 'active-nav' : ''} onClick={() => setIsNavShowing (prev => !prev)}>Login</NavLink>
-          </li>
           <li>
-            <NavLink to="/register" className={({isActive}) => isActive ? 'active-nav' : ''} onClick={() => setIsNavShowing (prev => !prev)}>Register</NavLink>
-          </li> */}
-          <PersonOutlinedIcon />
-          <span>{currentUser.name}</span>
+            <NavLink to="/login" className={({isActive}) => isActive ? 'active-nav' : ''} onClick={() => setIsNavShowing (prev => !prev)}>Logout <PersonOutlinedIcon style={{paddingTop: "5px 0", margin: "0 10px", borderRadius: "50%", background: "lightblue"}}/><span>Aman</span></NavLink>
+          </li>
         </ul>
         <button className='nav_toggle-btn' onClick={() => setIsNavShowing (prev => !prev)}>
           {

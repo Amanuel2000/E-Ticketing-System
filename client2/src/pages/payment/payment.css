@@ -74,19 +74,8 @@
 
 /* Media queries (small screen)*/
 @media screen and (max-width: 600px) {
-
-  .pay_card,
-  .ticket_summary_card {
+  .pay_card {
     width: 96%;
-  }
-
-  .summary_card {
-    flex-direction: column;
-    width: 96%;
-  }
-
-  .ord-num-cpy button {
-    padding: 1px 5px;
   }
 
   .pay_btn {

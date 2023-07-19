@@ -10,7 +10,6 @@
   max-width: 30rem;
   margin: 2rem auto;
   padding: 2rem;
-  height: 80%;
   background-color: white;
   border-radius: 10px;
   box-shadow: -5px -5px 15px rgb(255, 255, 255, 0.1), 5px 5px 15px rgb(0, 0, 0, 0.35);
@@ -35,8 +34,15 @@
 
 .input-group input {
   padding: 0.5em;
+  width: 100%;
   border-bottom: 1px solid gray;
   font-size: 1rem;
+}
+.error-message {
+  color: red;
+  text-align: left;
+  font-size: 0.9rem;
+  margin-top: 0;
 }
 
 .register form button {
@@ -54,10 +60,6 @@
   font-weight: 700;
 }
 
-.register-card p {
-  text-align: center;
-}
-
 .register-card p span:hover {
   text-decoration: underline;
 }
@@ -65,15 +67,13 @@
 /*Media Queries (medium screen)*/
 @media screen and (max-width: 1024px) {
   .register-card {
-    margin: 2rem 0;
-    width: 60%;
+    width: 85%;
   }
 }
 
 /*Media Queries (small screen)*/
 @media screen and (max-width: 600px) {
   .register-card {
-    margin: 2rem 0;
-    width: 90%;
+    width: 95%;
   }
 }

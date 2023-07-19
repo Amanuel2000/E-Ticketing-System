@@ -1,5 +1,4 @@
 .gen-container {
-  box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
   border-radius: 20px;
   padding: 20px;
   display: flex;
@@ -7,6 +6,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
 }
 .gen-container h1 {
   text-align: center;
@@ -67,8 +67,11 @@
 }
 
 .qrc input {
-  width: 100%;
+  width: 60%;
   text-align: center;
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+  padding: 5px;
 }
 .qrc .gen-qrc {
   width: 300px;
@@ -94,11 +97,37 @@
   font-weight: bold;
 }
 
-/* Media queries (small screen)*/
+/* Media queries (medium screen)*/
 @media screen and (max-width: 1024px) {
+  .gen-container {
+    padding: 0;
+  }
   .card-warn,
   .order-number,
   .card-qrc {
+    width: 90%;
+  }
+}
+
+/* Media queries (small screen)*/
+@media screen and (max-width: 600px) {
+  .card-warn,
+  .order-number,
+  .card-qrc {
+    width: 95%;
+  }
+  .card-qrc {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .qrc .gen-qrc {
+    width: 250px;
+    height: 250px;
+  }
+  .qrc input {
     width: 100%;
+  }
+  .gen-btn {
+    width: 80%;
   }
 }

@@ -69,7 +69,7 @@ const GenerateQRC = () => {
             <div className="qrc">
               <input
                 type="text"
-                placeholder="Paste your ticket number here to get your QR Code "
+                placeholder="Paste your ticket number here"
                 value={url}
                 onChange={e => setUrl(e.target.value)} />
               <button onClick={GenerateQRCode}  className="gen-btn">Get my QRCode</button>

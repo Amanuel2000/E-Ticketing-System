@@ -6,10 +6,8 @@
   align-items: center;
 }
 .login-card {
-  max-width: 30rem;
   margin: 2rem auto;
   padding: 2rem;
-  height: 80%;
   background-color: white;
   border-radius: 10px;
   box-shadow: -5px -5px 15px rgb(255, 255, 255, 0.1), 5px 5px 15px rgb(0, 0, 0, 0.35);
@@ -34,6 +32,7 @@
 
 .input-group input {
   padding: 0.5em;
+  width: 100%;
   border-bottom: 1px solid gray;
   font-size: 1rem;
 }
@@ -64,15 +63,13 @@
 /*Media Queries (medium screen)*/
 @media screen and (max-width: 1024px) {
   .login-card {
-    margin: 2rem 0;
-    width: 60%;
+    width: 85%;
   }
 }
 
 /*Media Queries (small screen)*/
 @media screen and (max-width: 600px) {
   .login-card {
-    margin: 2rem 0;
-    width: 90%;
+    width: 95%;
   }
 }

@@ -74,7 +74,14 @@
   .match_summary_card {
     width: 96%;
   }
+  .form-row div {
+    flex-direction: column;
+  }
   .ticket_btn {
     gap: 5px;
+  }
+  .ticket_btn button {
+    padding: 5px;
+    border-radius: 5px;
   }
 }

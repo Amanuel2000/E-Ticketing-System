@@ -1,111 +1,68 @@
-import React from 'react'
-import "./fixtures.scss"
-
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
-import RightBar from '../../components/rightBar/RightBar';
-import LeftBar from '../../components/leftBar/LeftBar';
-import { Link } from 'react-router-dom';
-import Footer from '../../components/footer/Footer';
-
+import LeftBar from '../../components/LeftBar'
+import RightBar from '../../components/RightBar'
+import './fixtures.css'
+import { Link } from 'react-router-dom'
+import { fixtures } from '../../data';
+// import { useState } from 'react';
+// import axios from 'axios';
 
 const Fixtures = () => {
+  // const [fixtures, setFixtures] = useState([])
+
+  // useEffect(() => {
+  //   const fetchAllFixtures = async () => {
+  //     try {
+  //       const res = await axios.get("http://localhost:8080/fixtures")
+  //      setBooks(res)
+  //     } catch {
+  //       (err)
+  //       console.log(err)
+  //     }
+  //   }
+  // })
   return (
     <div>
-      <div className='fixture-page'>
+      <div className='fixtures'>
         <LeftBar />
 
-        <div className="fixture">
+        <div className="fixture-content">
           <h1>All Upcoming Fixtures</h1>
-          <div className="card">
-            <div className="desc">
-              <span><LocationOnOutlinedIcon style={{fontSize:"15px"}}/> AA Stadium</span>
-              <span><CalendarMonthIcon style={{fontSize:"15px"}}/> 23 June 2023</span>
-            </div>
-            <div className="team">
-              <span>HAWASA KENEMA</span>
-              <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
-              <span><AccessTimeOutlinedIcon style={{fontSize:"15px"}}/> 15:00</span>
-              <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
-              <span>ADAMAN KENEMA</span>
-            </div>
-            <Link className="fix-btn" to="/fixtures/ticket" >
-              <button>Request Ticket</button>
-            </Link>
-          </div>
-          <div className="card">
-            <div className="desc">
-              <span><LocationOnOutlinedIcon style={{fontSize:"15px"}}/> AA Stadium</span>
-              <span><CalendarMonthIcon style={{fontSize:"15px"}}/> 23 June 2023</span>
-            </div>
-            <div className="team">
-              <span>HAWASA KENEMA</span>
-              <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
-              <span><AccessTimeOutlinedIcon style={{fontSize:"15px"}}/> 15:00</span>
-              <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
-              <span>ADAMAN KENEMA</span>
-            </div>
-            <Link className="fix-btn" to="/ticket" >
-              <button>Request Ticket</button>
-            </Link>
-          </div>
-          <div className="card">
-            <div className="desc">
-              <span><LocationOnOutlinedIcon style={{fontSize:"15px"}}/> AA Stadium</span>
-              <span><CalendarMonthIcon style={{fontSize:"15px"}}/> 23 June 2023</span>
-            </div>
-            <div className="team">
-              <span>HAWASA KENEMA</span>
-              <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
-              <span><AccessTimeOutlinedIcon style={{fontSize:"15px"}}/> 15:00</span>
-              <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
-              <span>ADAMAN KENEMA</span>
-            </div>
-            <Link className="fix-btn" to="/ticket" >
-              <button>Request Ticket</button>
-            </Link>
-          </div>
-          <div className="card">
-            <div className="desc">
-              <span><LocationOnOutlinedIcon style={{fontSize:"15px"}}/> AA Stadium</span>
-              <span><CalendarMonthIcon style={{fontSize:"15px"}}/> 23 June 2023</span>
-            </div>
-            <div className="team">
-              <span>HAWASA KENEMA</span>
-              <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
-              <span><AccessTimeOutlinedIcon style={{fontSize:"15px"}}/> 15:00</span>
-              <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
-              <span>ADAMAN KENEMA</span>
-            </div>
-            <Link className="fix-btn" to="/ticket" >
-              <button>Request Ticket</button>
-            </Link>
-          </div>
-          <div className="card">
-            <div className="desc">
-              <span><LocationOnOutlinedIcon style={{fontSize:"15px"}}/> AA Stadium</span>
-              <span><CalendarMonthIcon style={{fontSize:"15px"}}/> 23 June 2023</span>
-            </div>
-            <div className="team">
-              <span>HAWASA KENEMA</span>
-              <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
-              <span><AccessTimeOutlinedIcon style={{fontSize:"15px"}}/> 15:00</span>
-              <img src= "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='' />
-              <span>ADAMAN KENEMA</span>
-            </div>
-            <Link className="fix-btn" to="/ticket" >
-              <button>Request Ticket</button>
-            </Link>
+          <div>
+            {
+              fixtures.map(({id, locationIcon, stadium, calendarIcon, Date, team1, team1Image, timeIcon, time, team2Image, team2}) => {
+                return (
+                  <div className="fixture-card" key={id}>
+                    {/* {fixtures.map(fixture)=>(
+                    <span>{fixture.fixtureType} </span>
+                    <span>{fixture.clubName} </span>
+                    <span>{fixture.clubImage} </span>
+                    <span>{fixture.opClubImage} </span>
+                    <span>{fixture.opClubName} </span>
+                    <span>{fixture.fixtureLocation} </span>
+                    <span>{fixture.fixtureTime} </span>
+                    )) */}
+                    <div className="desc">
+                      <span>{locationIcon} {stadium}</span>
+                      <span>{calendarIcon} {Date}</span>
+                    </div>
+                    <div className="team">
+                      <span>{team1}</span>{team1Image}
+                      <span>{timeIcon} {time}</span>{team2Image}
+                      <span>{team2}</span>
+                    </div>
+                    <Link to="/ticket" >
+                      <button className='btn'>Request Ticket</button>
+                    </Link>
+                  </div>
+                )
+              })
+            }
           </div>
         </div>
-
         <RightBar />
       </div>
-
-      <Footer />
     </div>
   )
 }
 
-export default Fixtures;
+export default Fixtures

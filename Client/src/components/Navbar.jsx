@@ -6,11 +6,23 @@ import { AiOutlineClose } from 'react-icons/ai';
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import { useState, useContext } from 'react';
 import { AuthContext } from "../context/authContext";
+import { useNavigate } from 'react-router-dom';
 
 
 const Navbar = () => {
   const [isNavShowing, setIsNavShowing] = useState(false);
   const { currentUser } = useContext(AuthContext);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
+  const handleLogout = () => {
+  // Clear user data (e.g., localStorage.clear())
+  // Update authentication state (e.g., setIsLoggedIn(false))
+  // Redirect to login page (e.g., history.push('/login'))
+
+    setIsLoggedIn(false);
+    localStorage.clear();
+    navigate('/login');
+  };
 
   return (
     <nav>
@@ -32,7 +44,14 @@ const Navbar = () => {
             <NavLink to="/contact" className={({isActive}) => isActive ? 'active-nav' : ''} onClick={() => setIsNavShowing (prev => !prev)}>Contact</NavLink>
           </li>
           <li>
-            <NavLink to="/login" className={({isActive}) => isActive ? 'active-nav' : ''} onClick={() => setIsNavShowing (prev => !prev)}>Logout <PersonOutlinedIcon style={{paddingTop: "5px 0", margin: "0 10px", borderRadius: "50%", background: "lightblue"}}/><span>Aman</span></NavLink>
+            <NavLink to="/login" className={({ isActive }) => isActive ? 'active-nav' : ''} onClick={() => setIsNavShowing(prev => !prev)}>
+            <button onClick={handleLogout}>Logout</button> </NavLink>
+          </li>
+          <li>
+            <NavLink to="/profile" className={({ isActive }) => isActive ? 'active-nav' : ''} onClick={() => setIsNavShowing(prev => !prev)}>
+            <PersonOutlinedIcon style={{ paddingTop: "5px 0", margin: "0 10px", borderRadius: "50%", background: "lightblue" }} />
+              <span>{currentUser.username}</span>
+            </NavLink>
           </li>
         </ul>
         <button className='nav_toggle-btn' onClick={() => setIsNavShowing (prev => !prev)}>

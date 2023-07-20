@@ -1,37 +1,58 @@
-import Navbar from "./components/navbar/Navbar";
-import About from "./pages/about/About";
-import Fixtures from "./pages/fixtures/Fixtures";
-import Contact from "./pages/contact/Contact";
-import Home from "./pages/home/Home";
-import Login from "./pages/login/Login";
-import Profile from "./pages/profile/Profile";
-import Register from "./pages/register/Register";
-import Footer from "./components/footer/Footer";
-import Ticket from "./pages/ticket/Ticket";
-import Payment from "./pages/payment/Payment";
-import GenerateQRC from "./pages/generateQRC/GenerateQRC";
 import {
   createBrowserRouter,
   RouterProvider,
-  Outlet
-} from "react-router-dom";
+  Outlet,
+  Navigate
+} from "react-router-dom"
+import Navbar from "./components/Navbar"
+import Home from "./pages/home/Home"
+import Fixtures from "./pages/fixtures/Fixtures"
+import About from "./pages/about/About"
+import Contact from "./pages/contact/Contact"
+import Login from "./pages/login/Login"
+import Register from "./pages/register/Register"
+import Footer from "./components/Footer"
+import NotFound from "./pages/notFound/NotFound"
+import GenerateQRC from "./pages/generateQRC/GenerateQRC"
+import Ticket from "./pages/ticket/Ticket"
+import Payment from "./pages/payment/Payment"
+import ScrollToTop from "./components/ScrollToTop"
+import { useContext } from "react"
+import { AuthContext } from "./context/authContext"
 
-function App() {
+const App = () => {
+
+  const {currentUser} = useContext(AuthContext);
+
   const Layout = () => {
     return (
+      <>
+      <ScrollToTop />
+      <Navbar />
       <div>
-        <Navbar />
-        <div>
-          <Outlet />
-        </div>
+        <Outlet />
       </div>
+      <Footer />
+      </>
     );
+  };
+
+  const ProtectedRoute = ({ children }) => {
+    if (!currentUser) {
+      return <Navigate to="/login" />;
+    }
+
+    return children;
   };
 
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Layout />,
+      element: (
+        <ProtectedRoute>
+          <Layout />
+        </ProtectedRoute>
+      ),
       children: [
         {
           path: "/",
@@ -39,46 +60,42 @@ function App() {
         },
         {
           path: "/fixtures",
-          element: <Fixtures />
+          element: <Fixtures />,
+        },
+        {
+          path: "/ticket",
+          element: <Ticket />,
+        },
+        {
+          path: "/payment",
+          element: <Payment />,
+        },
+        {
+          path: "/generate",
+          element: <GenerateQRC />,
         },
         {
           path: "/about",
-          element: <About />
+          element: <About />,
         },
         {
           path: "/contact",
-          element: <Contact />
+          element: <Contact />,
         },
         {
-          path: "/profile",
-          element: <Profile />
-        },
-        {
-          path: "fixtures/ticket",
-          element: <Ticket />
-        },
-        {
-          path: "fixtures/ticket/payment",
-          element: <Payment />
-        },
-        {
-          path: "fixtures/ticket/payment/generate",
-          element: <GenerateQRC />
-        },
-      ]
+          path: "*",
+          element: <NotFound />,
+        }
+      ],
     },
     {
       path: "/login",
-      element: <Login />
+      element: <Login />,
     },
     {
       path: "/register",
-      element: <Register />
+      element: <Register />,
     },
-    {
-      path: "/ticket",
-      element: <Ticket />
-    }
   ]);
 
   return (

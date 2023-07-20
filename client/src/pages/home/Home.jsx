@@ -1,23 +1,18 @@
-import React from 'react'
-import "./home.scss"
-import { Link } from 'react-router-dom'
+import FAQs from '../../components/FAQs'
+import MainHeader from '../../components/MainHeader'
+import Stories from '../../components/Stories'
+import Testimonials from '../../components/Testimonials'
+import './home.css'
 
 const Home = () => {
   return (
-    <div>
-      <div className="home">
-        <div className="container">
-          <div className="header-text">
-            <h1>Welcome to <span>E-ticket</span></h1>
-            <p>Get all Ethiopian Premier League Football matches tickets here...</p>
-            <Link to='/login'>
-              <button>Get Started</button>
-            </Link>
-          </div>
-        </div>
-      </div>
+    <div className='home'>
+      <MainHeader />
+      <Stories />
+      <FAQs />
+      <Testimonials />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

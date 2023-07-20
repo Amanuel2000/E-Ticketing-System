@@ -1,49 +1,65 @@
-import "./ticket.scss"
-import Dropdown from '../../components/dropdown/Dropdown-ticket';
+import "./ticket.css"
 import { Link } from "react-router-dom";
-import Footer from "../../components/footer/Footer";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 
 const Ticket = () => {
+  const ticketOptions = [
+    "VIP 200ETB",
+    "Standard 100ETB",
+    "Semi 50ETB",
+    "Ordinary 20ETB"
+  ];
+
+  const numOptions = [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+  ];
+
   return (
     <div>
       <div className="ticket">
-        <div className="container">
+        <div className="ticket_container">
           <h1>Get your ticket</h1>
-          <div className="card">
-            <form method="POST">
-              <div className="form-row">
-                <label htmlFor="">Selected Match</label>
-                <input type="text" name="selected-match" placeholder='Fasil vs Eth.Bunna on Oct 20, 2023 @ 4:00PM'/>
+          <div className="ticket_card">
+            <form className="form-row">
+              <div>
+                <label>Select Ticket Type and Price</label>
+                <select name="" id="">
+                  {
+                    ticketOptions.map(ticket => {
+                      return <option>{ticket}</option>
+                    })
+                  }
+                </select>
               </div>
-              <div className="form-row">
-                <label htmlFor="">Enter your name</label>
-                <input type="text" name="full_name" />
-              </div>
-              <div className="form-row">
-                <label htmlFor="">Select Price</label>
-                <Dropdown />
-              </div>
-              <div className="form-row">
+              
+              <div>
                 <label htmlFor="">Number of Applicants</label>
-                <input type="number" name="number_of_applicants" />
+                <select>
+                  {
+                    numOptions.map(num => {
+                      return <option>{num}</option>
+                    })
+                  }
+                </select>
               </div>
-              <div className="form-row">
-                <label htmlFor="">Total Price</label>
-                <input type="text" name="total-price" />
-              </div>
+              <label htmlFor="">Total Price</label>
+              <p></p>
             </form>
-            <div className="btn">
-              <Link to="/fixtures/ticket/payment">
-                <button>Go To Payment</button>
-              </Link>
+            <div className="ticket_btn">
               <Link to="/fixtures">
-                <button>Go Back To Fixtures</button>
+                <button className="btn"><AiOutlineArrowLeft /> Go Back To Fixtures</button>
+              </Link>
+              <Link to="/payment">
+                <button className="btn">Go To Payment <AiOutlineArrowRight /></button>
               </Link>
             </div>
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   )
 };

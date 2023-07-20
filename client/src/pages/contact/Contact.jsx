@@ -1,31 +1,24 @@
-import { Facebook, GitHub, LinkedIn, Twitter } from "@mui/icons-material";
-import Footer from "../../components/footer/Footer";
-import "./contact.scss"
+import Header from '../../components/Header'
+import './contact.css'
+import { MdEmail } from 'react-icons/md'
+import { BsMessenger, BsWhatsapp } from 'react-icons/bs'
 
 const Contact = () => {
   return (
     <div>
-      <div className="container">
-        <div className="contact-left">
-          <h2>Contact Us</h2>
-          <div className="social-icons">
-            <ul>
-              <li>
-                <span><Facebook style={{fontSize: "40px"}} /></span>
-              </li>
-              <li>
-                <span><LinkedIn style={{fontSize: "40px"}} /></span>
-              </li>
-              <li>
-                <span><GitHub style={{fontSize: "40px"}} /></span>
-              </li>
-              <li>
-                <span><Twitter style={{fontSize: "40px"}} /></span>
-              </li>
-            </ul>
+      <Header title="Get In Touch">
+      </Header>
+
+      <section className="contact">
+        <div className="container contact_container">
+          <div className="contact_wrapper">
+            <a href="mailto:eliasdewa6@gmail.com" target='_blank' rel='noreferrer noopener'><MdEmail /></a>
+            <a href="http://m.me/eliasdewa14" target='_blank' rel='noreferrer noopener'><BsMessenger /></a>
+            <a href="https://wa.me/+251910634296" target='_blank' rel='noreferrer noopener'><BsWhatsapp /></a>
           </div>
         </div>
         <div className="contact-right">
+          <h4>Or send your direct message here</h4>
           <form>
             <input
               type="text"
@@ -44,15 +37,14 @@ const Contact = () => {
               rows="5"
               placeholder="Your Message"
             ></textarea>
-            <button type="submit">
+            <button type="submit" className='btn'>
               Submit
             </button>
           </form>
         </div>
-      </div>
-      <Footer />
+      </section>
     </div>
   )
-};
+}
 
-export default Contact;
+export default Contact

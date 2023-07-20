@@ -5,9 +5,7 @@
   justify-content: center;
   align-items: center;
 }
-
 .register-card {
-  max-width: 30rem;
   margin: 2rem auto;
   padding: 2rem;
   background-color: white;
@@ -24,7 +22,7 @@
 .register-card form {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.5rem;
 }
 
 .input-group {
@@ -37,12 +35,6 @@
   width: 100%;
   border-bottom: 1px solid gray;
   font-size: 1rem;
-}
-.error-message {
-  color: red;
-  text-align: left;
-  font-size: 0.9rem;
-  margin-top: 0;
 }
 
 .register form button {
@@ -60,20 +52,26 @@
   font-weight: 700;
 }
 
+.register-card p {
+  text-align: center;
+}
+
 .register-card p span:hover {
   text-decoration: underline;
 }
 
 /*Media Queries (medium screen)*/
 @media screen and (max-width: 1024px) {
-  .register-card {
+  .register
+-card {
     width: 85%;
   }
 }
 
 /*Media Queries (small screen)*/
 @media screen and (max-width: 600px) {
-  .register-card {
+  .register
+-card {
     width: 95%;
   }
 }

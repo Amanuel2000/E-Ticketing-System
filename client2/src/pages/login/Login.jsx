@@ -52,9 +52,9 @@ const Login = () => {
               onChange={handleChange}
             />
           </div>
+
           {err && err}
-          <button>Login</button>
-          {/* <button onClick={handleLogin}>Login</button> */}
+          <button onClick={handleLogin}>Login</button>
         </form>
 
         <p>

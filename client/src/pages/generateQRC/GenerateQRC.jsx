@@ -75,7 +75,7 @@ const GenerateQRC = () => {
               <button onClick={GenerateQRCode}  className="gen-btn">Get my QRCode</button>
               <div className="gen-qrc">
                 {qr && <>
-                  <img src={qr} />
+                  <img src={qr} alt="QR Code"/>
                   <a href={qr} download="qrcode.png">Download</a>
                 </>}
               </div>

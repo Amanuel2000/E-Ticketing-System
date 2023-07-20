@@ -1,0 +1,77 @@
+.register {
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.register-card {
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: -5px -5px 15px rgb(255, 255, 255, 0.1), 5px 5px 15px rgb(0, 0, 0, 0.35);
+}
+
+.register-card h1 {
+  color: #555;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.register-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input-group input {
+  padding: 0.5em;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 1rem;
+}
+
+.register form button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 20px;
+  border: none;
+  background-color: #55c2da;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.register-card form button:hover {
+  font-weight: 700;
+}
+
+.register-card p {
+  text-align: center;
+}
+
+.register-card p span:hover {
+  text-decoration: underline;
+}
+
+/*Media Queries (medium screen)*/
+@media screen and (max-width: 1024px) {
+  .register
+-card {
+    width: 85%;
+  }
+}
+
+/*Media Queries (small screen)*/
+@media screen and (max-width: 600px) {
+  .register
+-card {
+    width: 95%;
+  }
+}

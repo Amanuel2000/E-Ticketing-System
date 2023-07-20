@@ -1,0 +1,89 @@
+/* .payment {
+  // background: -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
+  // height: 100vh;
+} */
+.pay_container {
+  box-shadow: 0px 0px 25px -10px #00000061;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pay_container h1 {
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+
+.pay_card {
+  width: 70%;
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 25px 40px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  width: 100%;
+}
+
+.form-row label {
+  font-weight: 700;
+}
+
+.form-row input {
+  width: 97%;
+  border: 1px solid lightgray;
+}
+
+.form-row .copy-btn {
+  width: 25%;
+  border-radius: 10px;
+}
+.form-row .copy-btn:hover {
+  color: black;
+}
+.pay_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Media queries (medium screen)*/
+@media screen and (max-width: 1024px) {
+
+  .pay_card,
+  .ticket_summary_card {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .summary_card {
+    width: 90%;
+  }
+}
+
+/* Media queries (small screen)*/
+@media screen and (max-width: 600px) {
+  .pay_card {
+    width: 96%;
+  }
+
+  .pay_btn {
+    gap: 5px;
+  }
+
+  .pay_btn button {
+    padding: 5px;
+    border-radius: 5px;
+  }
+}

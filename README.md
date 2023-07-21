@@ -1,28 +1,28 @@
 
-## E-ticketing System
+# E-ticketing System
 
 The proposed system is QR Based Online Code Ticketing System that will be developed as a web application which enable users get an enhanced and advanced ticket selling system and event organizers make their service better than usual way of old and manual ticket selling system. The
 system will have components, Database, frontend, backend and public API. The database will store all the user’s data and ticket information.
 
-Functional Requirements
+## Functional Requirements
 
 Functional requirements describe the interaction between the system and its environment independent of its implementation. The environment includes the Customers and System Admin.
 
-Login
+## Login
 
 This feature is used by the user to login into the system. They are required to enter user name and password before they are allowed to enter the system. The user’s name and password will be verified and if invalid username or invalid password is filled, user will not be allowed to enter in
 to the system.
 
-Sign-up
+## Sign-up
 
 This feature is performed by users to create account if they didn’t have an account before. Sign up feature is a must for customers who are going to access the system. Customers need to fill all valid personal information in the given forms. The system will not allow if unnecessary data will be
 entered
 
-View Fixtures
+## View Fixtures
 
 This feature can be performed by all users who have an account. Users are required to access the posted fixtures by selecting the game matches they want.
 
-Search Matches
+## Search Matches
 
 This feature is used for searching available matches and tickets. Users can search matches based on fixture type and fixture name.
 

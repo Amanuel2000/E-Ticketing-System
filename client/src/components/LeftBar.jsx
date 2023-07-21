@@ -1,4 +1,6 @@
 import Select from "react-select";
+import imageAd from '../images/ads.jpg'
+import imageAnn from '../images/ann.jpeg'
 
 const LeftBar = () => {
   const leagueOptions = [
@@ -22,9 +24,12 @@ const LeftBar = () => {
         </div>
         <div className="item">
           <div className="desc">
-            <p>
-              Promotion
-            </p>
+            <img src={imageAd} alt="advert" />
+          </div>
+        </div>
+        <div className="item">
+          <div className="desc">
+            <img src={imageAnn} alt="announcement" />
           </div>
         </div>
       </div>

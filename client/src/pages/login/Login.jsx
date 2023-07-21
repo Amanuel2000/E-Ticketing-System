@@ -23,7 +23,7 @@ const Login = () => {
     e.preventDefault();
     try {
       await login(inputs);
-      navigate("/fixtures")
+      navigate("/")
     } catch (err) {
       setErr(err.response.data);
     }

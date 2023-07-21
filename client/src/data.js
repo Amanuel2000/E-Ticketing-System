@@ -13,33 +13,6 @@ import Jimma from './images/teamsLogo/Jimma_Aba_JifarFC.png';
 import Mekelle from './images/teamsLogo/Mekelle_70_EndertaFC.png';
 import Hawassa from './images/teamsLogo/Hawassa_CityFC.png';
 
-const links = [
-    {
-        name: "Home",
-        path: '/'
-    },
-    {
-        name: "Fixtures",
-        path: '/fixtures'
-    },
-    {
-        name: "About",
-        path: '/about'
-    },
-    {
-        name: "Contact",
-        path: '/contact'
-    },
-    {
-        name: "Login",
-        path: '/login'
-    },
-    {
-        name: "Register",
-        path: '/register'
-    }
-]
-
 const stories = [
     {
         id: 1,
@@ -127,81 +100,79 @@ const testimonials = [
     }
 ]
 
-const date = new Date();
-const options = {
-  weekday: 'long',
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-};
-
 const fixtures = [
     {
         id: 1,
         locationIcon: <LocationOnOutlined style={{fontSize:"15px"}}/>,
         stadium: "Addis Ababa",
         calendarIcon: <CalendarMonthOutlined />,
-        Date: date.toLocaleString('en-IN', options),
+        Date: "Friday, 21 July, 2023",
         team1: "Sidama Coffee FC",
         team1Image: <img src={Sidama} alt="Team 1 Logo" />,
         timeIcon: <AccessTimeOutlined style={{fontSize:"15px"}} />,
-        time: "15:00",
+        time: "5:00 pm",
         team2Image: <img src={Coffee} alt="Team 2 Logo" />,
         team2: "Ethiopian Coffee FC",
+        price: "300 ETB"
     },
     {
         id: 2,
         locationIcon: <LocationOnOutlined style={{fontSize:"15px"}}/>,
-        stadium: "Addis Ababa",
+        stadium: "Bahir Dar",
         calendarIcon: <CalendarMonthOutlined />,
-        Date: date.toLocaleString('en-IN', options),
+        Date: "Saturday, 22 July, 2023",
         team1: "Bahir Dar FC",
         team1Image: <img src={Bahir} alt="Team 1 Logo" />,
         timeIcon: <AccessTimeOutlined style={{fontSize:"15px"}} />,
-        time: "15:00",
+        time: "10:00 am",
         team2Image: <img src={Wolkite} alt="Team 2 Logo" />,
         team2: "Wolkite FC",
+        price: "200 ETB"
     },
     {
         id: 3,
         locationIcon: <LocationOnOutlined style={{fontSize:"15px"}}/>,
-        stadium: "Addis Ababa",
+        stadium: "Adama",
         calendarIcon: <CalendarMonthOutlined />,
-        Date: date.toLocaleString('en-IN', options),
+        Date: "Saturday, 22 July, 2023",
         team1: "Hawassa FC",
         team1Image: <img src={Hawassa} alt="Team 1 Logo" />,
         timeIcon: <AccessTimeOutlined style={{fontSize:"15px"}} />,
-        time: "15:00",
+        time: "4:00 am",
         team2Image: <img src={Wolaitta} alt="Team 2 Logo" />,
         team2: "Wolaitta FC",
+        price: "200 ETB"
     },
     {
         id: 4,
         locationIcon: <LocationOnOutlined style={{fontSize:"15px"}}/>,
-        stadium: "Addis Ababa",
+        stadium: "Hawassa",
         calendarIcon: <CalendarMonthOutlined />,
-        Date: date.toLocaleString('en-IN', options),
+        Date: "Sunday, 23 July, 2023",
         team1: "Saint Geo. FC",
         team1Image: <img src={Saint} alt="Team 1 Logo" />,
         timeIcon: <AccessTimeOutlined style={{fontSize:"15px"}} />,
-        time: "15:00",
+        time: "5:00 pm",
         team2Image: <img src={Fasil} alt="Team 2 Logo" />,
         team2: "Fasil FC",
+        price: "100 ETB"
     },
     {
         id: 5,
         locationIcon: <LocationOnOutlined style={{fontSize:"15px"}}/>,
-        stadium: "Addis Ababa",
+        stadium: "Mekele",
         calendarIcon: <CalendarMonthOutlined />,
-        Date: date.toLocaleString('en-IN', options),
+        Date: "Sunday, 30 July, 2023",
         team1: "Jimma FC",
         team1Image: <img src={Jimma} alt="Team 1 Logo" />,
         timeIcon: <AccessTimeOutlined style={{fontSize:"15px"}} />,
-        time: "15:00",
+        time: "11:00 am",
         team2Image: <img src={Mekelle} alt="Team 2 Logo" />,
         team2: "Mekelle FC",
+        price: "50 ETB"
     }
 ]
+
 
 const teams = [
     {
@@ -265,4 +236,4 @@ const teams = [
         name: "Wolkite City FC"
     },
 ]
-export { links, stories, faqs, testimonials, fixtures, teams }
+export { stories, faqs, testimonials, fixtures, teams }

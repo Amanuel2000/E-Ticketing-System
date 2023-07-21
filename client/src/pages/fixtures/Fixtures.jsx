@@ -31,15 +31,6 @@ const Fixtures = () => {
               fixtures.map(({id, locationIcon, stadium, calendarIcon, Date, team1, team1Image, timeIcon, time, team2Image, team2}) => {
                 return (
                   <div className="fixture-card" key={id}>
-                    {/* {fixtures.map(fixture)=>(
-                    <span>{fixture.fixtureType} </span>
-                    <span>{fixture.clubName} </span>
-                    <span>{fixture.clubImage} </span>
-                    <span>{fixture.opClubImage} </span>
-                    <span>{fixture.opClubName} </span>
-                    <span>{fixture.fixtureLocation} </span>
-                    <span>{fixture.fixtureTime} </span>
-                    )) */}
                     <div className="desc">
                       <span>{locationIcon} {stadium}</span>
                       <span>{calendarIcon} {Date}</span>

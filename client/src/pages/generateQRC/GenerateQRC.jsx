@@ -1,7 +1,7 @@
 import "./generateQRC.css"
 import QRCode from 'qrcode'
 import { useState } from 'react'
-
+import { fixtures } from '../../data'
 const GenerateQRC = () => {
 
   function generateRandomString(length) {
@@ -38,6 +38,7 @@ const GenerateQRC = () => {
 		})
 	}
 
+
   return (
     <div>
       <div className="generateQRC">
@@ -51,20 +52,25 @@ const GenerateQRC = () => {
           <div className="order-number">
             <form className="form-row">
               <label htmlFor="">Your Confirmation Number is: </label>
-              <input type="text" value={"CONF2023" + randomString} />
+              <input type="text" value={"CONF2023-" + randomString} />
             </form>
           </div>
 
           <div className="card-qrc">
             <div className="details">
-              <h3>Your Ticket Details</h3>
+              <p style={{fontSize:"1.2rem"}}><b>Your Ticket Details</b></p>
               <br />
-              <span>Match: <big>Hawassa vs Adama </big></span>
-              <span>Date: <big>25 Aug 2023</big></span>
-              <span>Time: <big> 12:00 PM </big></span>
-              <span>Type: <big>Premiear League</big></span>
-              <span>Total Price: <big>ETB 500 </big> </span>
-              <span>Ticket Number: <big>{"QRC2023" + randomString}  </big> </span>
+              <span><b>Match:</b> {fixtures[1].team1} vs {fixtures[1].team2}</span>
+              <br />
+              <span><b>Date:</b> {fixtures[1].Date}</span>
+              <br />
+              <span><b>Time:</b> {fixtures[1].time}</span>
+              <br />
+              <span><b>Total Price:</b> {fixtures[1].price}</span>
+              <br />
+              <span><b>Stadium:</b> {fixtures[1].stadium}</span>
+              <br />
+              <span>Ticket Number: <b>{"QRC2023-" + randomString}</b></span>
             </div>
             <div className="qrc">
               <input

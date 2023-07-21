@@ -27,7 +27,7 @@ const Stories = () => {
                       <p>{desc}</p>
                       <br />
                       <br />
-                      <Link to='/login'><button className='btn'>Get Started Here</button></Link>
+                      <Link to='/fixtures'><button className='btn'>Get Started Here</button></Link>
                     </Card>
                   )
                 })

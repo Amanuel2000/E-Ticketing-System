@@ -1,23 +1,27 @@
 import "./ticket.css"
 import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import React, { useState } from 'react';
 
 const Ticket = () => {
+  const [value, setValue] = useState('')
   const ticketOptions = [
-    "VIP 200ETB",
-    "Standard 100ETB",
-    "Semi 50ETB",
-    "Ordinary 20ETB"
+    {label:" ", value:  0},
+    {label:"VIP 200ETB", value: 200},
+    {label:"Standard 100ETB", value: 100},
+    {label:"Semi 50ETB", value: 50},
+    {label:"Ordinary 20ETB", value: 20},
   ];
+
+  function handleSelect(event){
+    setValue(event.target.value)
+  }
 
   const numOptions = [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5"
+    {label:"", value: 0},
+    {label:"One", value: 1},
   ];
-
+  
   return (
     <div>
       <div className="ticket">
@@ -27,27 +31,26 @@ const Ticket = () => {
             <form className="form-row">
               <div>
                 <label>Select Ticket Type and Price</label>
-                <select name="" id="">
+                <select onChange={handleSelect}>
                   {
-                    ticketOptions.map(ticket => {
-                      return <option>{ticket}</option>
-                    })
+                    ticketOptions.map(ticket => (
+                      <option value = {ticket.value}>{ticket.label}</option>
+                    ))
                   }
                 </select>
               </div>
-              
               <div>
                 <label htmlFor="">Number of Applicants</label>
                 <select>
                   {
-                    numOptions.map(num => {
-                      return <option>{num}</option>
-                    })
+                    numOptions.map(num => (
+                      <option value = {num.value}>{num.label}</option>
+                    ))
                   }
                 </select>
               </div>
               <label htmlFor="">Total Price</label>
-              <p></p>
+              <p>{(value) * 1 } ETB </p>
             </form>
             <div className="ticket_btn">
               <Link to="/fixtures">

@@ -16,6 +16,7 @@ import NotFound from "./pages/notFound/NotFound"
 import GenerateQRC from "./pages/generateQRC/GenerateQRC"
 import Ticket from "./pages/ticket/Ticket"
 import Payment from "./pages/payment/Payment"
+import Profile from "./pages/profile/Profile"
 import ScrollToTop from "./components/ScrollToTop"
 import { useContext } from "react"
 import { AuthContext } from "./context/authContext"
@@ -81,6 +82,10 @@ const App = () => {
         {
           path: "/contact",
           element: <Contact />,
+        },
+        {
+          path: "/profile",
+          element: <Profile />,
         },
         {
           path: "*",

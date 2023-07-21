@@ -1,10 +1,10 @@
 import Select from "react-select";
 
 const LeftBar = () => {
-  const options = [
-    {value: "Men Football", label: "Men Football"},
-    {value: "Female Football", label: "Female Football"},
-    {value: "Tennis", label: "Tennis"},
+  const leagueOptions = [
+    "Men Football",
+    "Female Football",
+    "Tennis"
   ];
 
   return (
@@ -12,7 +12,20 @@ const LeftBar = () => {
       <div className='leftBar'>
         <div className="leftBarWrapper">
           <button className="leftBarButton">Category</button>
-          <Select options={options} />
+          <select>
+            {
+              leagueOptions.map(league => {
+                return <option>{league}</option>
+              })
+            }
+          </select>
+        </div>
+        <div className="item">
+          <div className="desc">
+            <p>
+              Promotion
+            </p>
+          </div>
         </div>
       </div>
     </div>

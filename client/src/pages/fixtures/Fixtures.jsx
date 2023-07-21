@@ -24,7 +24,6 @@ const Fixtures = () => {
     <div>
       <div className='fixtures'>
         <LeftBar />
-
         <div className="fixture-content">
           <h1>All Upcoming Fixtures</h1>
           <div>

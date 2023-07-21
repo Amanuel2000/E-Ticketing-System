@@ -12,7 +12,7 @@ const Contact = () => {
       <section className="contact">
         <div className="container contact_container">
           <div className="contact_wrapper">
-            <a href="mailto:eliasdewa6@gmail.com" target='_blank' rel='noreferrer noopener'><MdEmail /></a>
+            <a href="mailto:eticketwpp@gmail.com" target='_blank' rel='noreferrer noopener'><MdEmail /></a>
             <a href="http://m.me/eliasdewa14" target='_blank' rel='noreferrer noopener'><BsMessenger /></a>
             <a href="https://wa.me/+251910634296" target='_blank' rel='noreferrer noopener'><BsWhatsapp /></a>
           </div>

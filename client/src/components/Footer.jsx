@@ -13,7 +13,7 @@ const Footer = () => {
             Save your priceless time. Get your ticket online.
           </p>
           <div className="footer_socials">
-            <a href="https://github.com" target="_blank" rel="noreferrer noopener"><FaGithub/></a>
+            <a href="https://github.com/Amanuel2000/E-Ticketing-System" target="_blank" rel="noreferrer noopener"><FaGithub/></a>
             <a href="https://linkedin.com" target="_blank" rel="noreferrer noopener"><FaLinkedin/></a>
             <a href="https://facebook.com" target="_blank" rel="noreferrer noopener"><FaFacebookF/></a>
             <a href="https://twitter.com" target="_blank" rel="noreferrer noopener"><FaTwitter/></a>

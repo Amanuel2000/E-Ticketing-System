@@ -49,8 +49,10 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink to="/profile" className={({ isActive }) => isActive ? 'active-nav' : ''} onClick={() => setIsNavShowing(prev => !prev)}>
-            <PersonOutlinedIcon style={{ paddingTop: "5px 0", margin: "0 10px", borderRadius: "50%", background: "lightblue" }} />
-              <span>{currentUser.username}</span>
+            <div>
+              <img src= {currentUser.image} style={{ paddingTop: "5px 0", margin: "0", borderRadius: "50%", objectFit:"cover", background: "lightblue", width:"40px", height:"40px" }} alt="current user" />
+              <span>{currentUser.name}</span>
+            </div>
             </NavLink>
           </li>
         </ul>
